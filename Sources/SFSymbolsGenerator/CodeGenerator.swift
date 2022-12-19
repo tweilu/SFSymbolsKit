@@ -17,12 +17,17 @@ public final class CodeGenerator {
 
     public func run() throws {
 
+        let url = Bundle.module.url(forResource: "symbol_order", withExtension: "plist")!
+        let data = try Data(contentsOf: url)
+        let rawSymbols = try Self.plistDecoder.decode([String].self, from: data)
+
         let versions = try generateVersions()
 
-        _ = try generateSymbols(nameAvailability: versions)
+        _ = try generateSymbols(symbols: rawSymbols, nameAvailability: versions)
         _ = try generateCategories()
-        _ = try generateSymbolsSearchTerms()
+        _ = try generateSymbolsSearchTerms(symbols: rawSymbols)
         _ = try generateSymbolCaseIterable()
+        _ = try generateUnicodeExtension(symbols: rawSymbols)
 
     }
 
@@ -50,11 +55,7 @@ public final class CodeGenerator {
         return url
     }
 
-    private func generateSymbols(nameAvailability: NameAvailability) throws -> Bool {
-
-        let url = Bundle.module.url(forResource: "symbol_order", withExtension: "plist")!
-        let data = try Data(contentsOf: url)
-        let symbols = try Self.plistDecoder.decode([String].self, from: data)
+    private func generateSymbols(symbols: [String], nameAvailability: NameAvailability) throws -> Bool {
 
         var symbolsString = "\(Self.codegenDisclaimer)\nenum SFSymbol: String, Codable {\n"
         symbolsString.append(contentsOf: symbols.map({
@@ -108,11 +109,61 @@ public final class CodeGenerator {
     }
 
     private func generateIfAvailable(versionMap: [PlatformKey: String]) -> String {
-        let result = versionMap.reduce(into: [String]()) { (partialResult, arg1) in
-            let (platform, version) = arg1
-            partialResult.append("\(platform.rawValue) \(version)")
+        let result = PlatformKey.allCases.reduce(into: [String]()) { partialResult, platform in
+            if let version = versionMap[platform] {
+                partialResult.append("\(platform.rawValue) \(version)")
+            }
         }
         return "    @available(\(result.joined(separator: ", ")), *)"
+    }
+
+    // MARK: - Unicode
+
+    private func generateUnicodeExtension(symbols: [String]) throws -> Bool {
+        let map = try generateUnicodeMap()
+
+        var result = """
+        extension SFSymbol {
+            var string: String? {
+                switch self {
+
+        """
+        for symbol in symbols {
+            var valueString = "nil"
+            if let value = map[symbol] {
+                valueString = "\"\(value)\""
+            }
+            result.append(contentsOf: "            case .\(formatRawValue(symbol)): return \(valueString)\n")
+        }
+        result.append(contentsOf: """
+                }
+            }
+        }
+
+        """)
+
+        let filename = getCodegenPath().appendingPathComponent("SFSymbol+String.swift", isDirectory: false)
+        do {
+            try result.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+            return true
+        } catch {
+            // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+            print("Failed to generate SFSymbols+String.swift: \(error)")
+        }
+        return false
+    }
+
+    private func generateUnicodeMap() throws -> [String : String] {
+
+        let symbolsURL = Bundle.module.url(forResource: "symbol_names", withExtension: "txt")!
+        let symbolsString = try String(contentsOf: symbolsURL, encoding: .utf8)
+        let symbols = symbolsString.split(separator: "\n").map { String($0) }
+
+        let charsURL = Bundle.module.url(forResource: "symbol_chars", withExtension: "txt")!
+        let charsString = try String(contentsOf: charsURL, encoding: .utf8)
+        let chars = Array(charsString).map { String($0) }
+
+        return Dictionary(uniqueKeysWithValues: zip(symbols, chars))
     }
 
     // MARK: - SFSymbol+CaseIterable
@@ -155,7 +206,7 @@ public final class CodeGenerator {
 
     // MARK: - Search Terms
 
-    private func generateSymbolsSearchTerms() throws -> Bool {
+    private func generateSymbolsSearchTerms(symbols: [String]) throws -> Bool {
 
         let url = Bundle.module.url(forResource: "symbol_search", withExtension: "plist")!
         let data = try Data(contentsOf: url)
@@ -169,8 +220,10 @@ public final class CodeGenerator {
 
         """
 
-        for (key, value) in symbolSearchMap {
-            string.append(contentsOf: searchTerms(symbol: key, searchTerms: value))
+        for symbol in symbols {
+            if let value = symbolSearchMap[symbol] {
+                string.append(contentsOf: searchTerms(symbol: symbol, searchTerms: value))
+            }
         }
         let trailing = """
                     default: return []
@@ -284,8 +337,8 @@ struct Category {
     let symbols: [String]
 }
 
-enum PlatformKey: String, Codable {
-    case macOS, tvOS, iOS, watchOS
+enum PlatformKey: String, Codable, CaseIterable {
+    case iOS, macOS, watchOS, tvOS
 }
 struct NameAvailability {
     let symbols: [String: String]
