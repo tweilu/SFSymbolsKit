@@ -27,6 +27,10 @@ enum SFSymbol: String, Codable {
     case rectanglePortraitAndArrowRight = "rectangle.portrait.and.arrow.right"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case rectanglePortraitAndArrowRightFill = "rectangle.portrait.and.arrow.right.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case rectanglePortraitAndArrowForward = "rectangle.portrait.and.arrow.forward"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case rectanglePortraitAndArrowForwardFill = "rectangle.portrait.and.arrow.forward.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case pencil = "pencil"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -35,8 +39,22 @@ enum SFSymbol: String, Codable {
     case pencilCircleFill = "pencil.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case pencilSlash = "pencil.slash"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case pencilLine = "pencil.line"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case eraser = "eraser"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case eraserFill = "eraser.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case eraserLineDashed = "eraser.line.dashed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case eraserLineDashedFill = "eraser.line.dashed.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case squareAndPencil = "square.and.pencil"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squareAndPencilCircle = "square.and.pencil.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squareAndPencilCircleFill = "square.and.pencil.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case rectangleAndPencilAndEllipsis = "rectangle.and.pencil.and.ellipsis"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -152,6 +170,10 @@ enum SFSymbol: String, Codable {
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case trayCircleFill = "tray.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case trayFull = "tray.full"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case trayFullFill = "tray.full.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case trayAndArrowUp = "tray.and.arrow.up"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case trayAndArrowUpFill = "tray.and.arrow.up.fill"
@@ -163,10 +185,6 @@ enum SFSymbol: String, Codable {
     case tray2 = "tray.2"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case tray2Fill = "tray.2.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case trayFull = "tray.full"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case trayFullFill = "tray.full.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case externaldrive = "externaldrive"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -187,10 +205,26 @@ enum SFSymbol: String, Codable {
     case externaldriveBadgeXmark = "externaldrive.badge.xmark"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case externaldriveFillBadgeXmark = "externaldrive.fill.badge.xmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case externaldriveBadgeQuestionmark = "externaldrive.badge.questionmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case externaldriveFillBadgeQuestionmark = "externaldrive.fill.badge.questionmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case externaldriveBadgeQuestionmarkAr = "externaldrive.badge.questionmark.ar"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case externaldriveFillBadgeQuestionmarkAr = "externaldrive.fill.badge.questionmark.ar"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case externaldriveBadgeExclamationmark = "externaldrive.badge.exclamationmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case externaldriveFillBadgeExclamationmark = "externaldrive.fill.badge.exclamationmark"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case externaldriveBadgePersonCrop = "externaldrive.badge.person.crop"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case externaldriveFillBadgePersonCrop = "externaldrive.fill.badge.person.crop"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case externaldriveTrianglebadgeExclamationmark = "externaldrive.trianglebadge.exclamationmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case externaldriveFillTrianglebadgeExclamationmark = "externaldrive.fill.trianglebadge.exclamationmark"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case externaldriveBadgeIcloud = "externaldrive.badge.icloud"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -247,14 +281,18 @@ enum SFSymbol: String, Codable {
     case docBadgePlus = "doc.badge.plus"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case docFillBadgePlus = "doc.fill.badge.plus"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case docBadgeGearshape = "doc.badge.gearshape"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case docBadgeGearshapeFill = "doc.badge.gearshape.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case docBadgeArrowUp = "doc.badge.arrow.up"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case docBadgeArrowUpFill = "doc.badge.arrow.up.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case docBadgeEllipsis = "doc.badge.ellipsis"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case docFillBadgeEllipsis = "doc.fill.badge.ellipsis"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case docBadgeGearshape = "doc.badge.gearshape"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case docBadgeGearshapeFill = "doc.badge.gearshape.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case lockDoc = "lock.doc"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -287,6 +325,18 @@ enum SFSymbol: String, Codable {
     case arrowTriangle2CirclepathDocOnClipboard = "arrow.triangle.2.circlepath.doc.on.clipboard"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case docOnClipboardFill = "doc.on.clipboard.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case clipboard = "clipboard"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case clipboardFill = "clipboard.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case listBulletClipboard = "list.bullet.clipboard"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case listBulletClipboardFill = "list.bullet.clipboard.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case listClipboard = "list.clipboard"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case listClipboardFill = "list.clipboard.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case docRichtext = "doc.richtext"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -306,7 +356,11 @@ enum SFSymbol: String, Codable {
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case docRichtextZh = "doc.richtext.zh"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case docRichtextZhTraditional = "doc.richtext.zh.traditional"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case docRichtextFillZh = "doc.richtext.fill.zh"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case docRichtextFillZhTraditional = "doc.richtext.fill.zh.traditional"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case docRichtextJa = "doc.richtext.ja"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -389,6 +443,22 @@ enum SFSymbol: String, Codable {
     case calendarDayTimelineLeading = "calendar.day.timeline.leading"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case calendarDayTimelineTrailing = "calendar.day.timeline.trailing"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowshapeLeft = "arrowshape.left"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowshapeLeftFill = "arrowshape.left.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowshapeRight = "arrowshape.right"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowshapeRightFill = "arrowshape.right.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowshapeBackward = "arrowshape.backward"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowshapeBackwardFill = "arrowshape.backward.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowshapeForward = "arrowshape.forward"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowshapeForwardFill = "arrowshape.forward.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case arrowshapeTurnUpLeft = "arrowshape.turn.up.left"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -405,6 +475,14 @@ enum SFSymbol: String, Codable {
     case arrowshapeTurnUpBackwardCircle = "arrowshape.turn.up.backward.circle"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case arrowshapeTurnUpBackwardCircleFill = "arrowshape.turn.up.backward.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowshapeTurnUpBackwardBadgeClock = "arrowshape.turn.up.backward.badge.clock"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowshapeTurnUpBackwardBadgeClockFill = "arrowshape.turn.up.backward.badge.clock.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowshapeTurnUpBackwardBadgeClockRtl = "arrowshape.turn.up.backward.badge.clock.rtl"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowshapeTurnUpBackwardBadgeClockFillRtl = "arrowshape.turn.up.backward.badge.clock.fill.rtl"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case arrowshapeTurnUpRight = "arrowshape.turn.up.right"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -496,7 +574,11 @@ enum SFSymbol: String, Codable {
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case characterBookClosedZh = "character.book.closed.zh"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
+    case characterBookClosedZhTraditional = "character.book.closed.zh.traditional"
+    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case characterBookClosedFillZh = "character.book.closed.fill.zh"
+    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
+    case characterBookClosedFillZhTraditional = "character.book.closed.fill.zh.traditional"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case characterBookClosedJa = "character.book.closed.ja"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
@@ -533,14 +615,6 @@ enum SFSymbol: String, Codable {
     case newspaperCircle = "newspaper.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case newspaperCircleFill = "newspaper.circle.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case heartTextSquare = "heart.text.square"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case heartTextSquareFill = "heart.text.square.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case squareTextSquare = "square.text.square"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case squareTextSquareFill = "square.text.square.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case docTextImage = "doc.text.image"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -561,8 +635,6 @@ enum SFSymbol: String, Codable {
     case bookmarkSlash = "bookmark.slash"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case bookmarkSlashFill = "bookmark.slash.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case rosette = "rosette"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case graduationcap = "graduationcap"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -571,10 +643,24 @@ enum SFSymbol: String, Codable {
     case graduationcapCircle = "graduationcap.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case graduationcapCircleFill = "graduationcap.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case pencilAndRuler = "pencil.and.ruler"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case pencilAndRulerFill = "pencil.and.ruler.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case ticket = "ticket"
+    case ruler = "ruler"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case ticketFill = "ticket.fill"
+    case rulerFill = "ruler.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case backpack = "backpack"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case backpackFill = "backpack.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case backpackCircle = "backpack.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case backpackCircleFill = "backpack.circle.fill"
+    @available(watchOS 6.1, iOS 13.1, macOS 10.15, tvOS 13.0, *)
+    case studentdesk = "studentdesk"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case paperclip = "paperclip"
     @available(watchOS 6.1, iOS 13.1, macOS 10.15, tvOS 13.0, *)
@@ -601,12 +687,14 @@ enum SFSymbol: String, Codable {
     case personalhotspotCircle = "personalhotspot.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case personalhotspotCircleFill = "personalhotspot.circle.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case lineweight = "lineweight"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case person = "person"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case personFill = "person.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case personCircle = "person.circle"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case personCircleFill = "person.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case personFillTurnRight = "person.fill.turn.right"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -628,10 +716,6 @@ enum SFSymbol: String, Codable {
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case personFillQuestionmarkAr = "person.fill.questionmark.ar"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case personCircle = "person.circle"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case personCircleFill = "person.circle.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case personBadgePlus = "person.badge.plus"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case personFillBadgePlus = "person.fill.badge.plus"
@@ -647,12 +731,20 @@ enum SFSymbol: String, Codable {
     case personBadgeKey = "person.badge.key"
     @available(watchOS 8.5, iOS 15.4, macOS 12.3, tvOS 15.4, *)
     case personBadgeKeyFill = "person.badge.key.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case personBadgeShieldCheckmark = "person.badge.shield.checkmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case personBadgeShieldCheckmarkFill = "person.badge.shield.checkmark.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case shareplay = "shareplay"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case shareplaySlash = "shareplay.slash"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case rectangleInsetFilledAndPersonFilled = "rectangle.inset.filled.and.person.filled"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sharedWithYou = "shared.with.you"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sharedWithYouSlash = "shared.with.you.slash"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case personAndArrowLeftAndArrowRight = "person.and.arrow.left.and.arrow.right"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -665,6 +757,16 @@ enum SFSymbol: String, Codable {
     case person2Circle = "person.2.circle"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case person2CircleFill = "person.2.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case person2Slash = "person.2.slash"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case person2SlashFill = "person.2.slash.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case person2Gobackward = "person.2.gobackward"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case person2BadgeGearshape = "person.2.badge.gearshape"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case person2BadgeGearshapeFill = "person.2.badge.gearshape.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case personWave2 = "person.wave.2"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -673,6 +775,10 @@ enum SFSymbol: String, Codable {
     case person2Wave2 = "person.2.wave.2"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case person2Wave2Fill = "person.2.wave.2.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case personLineDottedPerson = "person.line.dotted.person"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case personLineDottedPersonFill = "person.line.dotted.person.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case person3 = "person.3"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -729,6 +835,8 @@ enum SFSymbol: String, Codable {
     case personCropCircleBadge = "person.crop.circle.badge"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case personCropCircleBadgeFill = "person.crop.circle.badge.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case personCropCircleDashed = "person.crop.circle.dashed"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case personCropSquare = "person.crop.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -737,6 +845,10 @@ enum SFSymbol: String, Codable {
     case personCropArtframe = "person.crop.artframe"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case photoArtframe = "photo.artframe"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case personBust = "person.bust"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case personBustFill = "person.bust.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case personCropRectangleStack = "person.crop.rectangle.stack"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -749,6 +861,14 @@ enum SFSymbol: String, Codable {
     case personCropRectangle = "person.crop.rectangle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case personCropRectangleFill = "person.crop.rectangle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case personCropRectangleBadgePlus = "person.crop.rectangle.badge.plus"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case personCropRectangleBadgePlusFill = "person.crop.rectangle.badge.plus.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squareOnSquareBadgePersonCrop = "square.on.square.badge.person.crop"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squareOnSquareBadgePersonCropFill = "square.on.square.badge.person.crop.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case arrowUpAndPersonRectanglePortrait = "arrow.up.and.person.rectangle.portrait"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -767,6 +887,338 @@ enum SFSymbol: String, Codable {
     case personTextRectangle = "person.text.rectangle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case personTextRectangleFill = "person.text.rectangle.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case checkerboardRectangle = "checkerboard.rectangle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case personAndBackgroundDotted = "person.and.background.dotted"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case figureStand = "figure.stand"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case figureStandLineDottedFigureStand = "figure.stand.line.dotted.figure.stand"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureDressLineVerticalFigure = "figure.dress.line.vertical.figure"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureArmsOpen = "figure.arms.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figure2ArmsOpen = "figure.2.arms.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figure2AndChildHoldinghands = "figure.2.and.child.holdinghands"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureAndChildHoldinghands = "figure.and.child.holdinghands"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case figureWalk = "figure.walk"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case figureWalkCircle = "figure.walk.circle"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case figureWalkCircleFill = "figure.walk.circle.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case figureWalkDiamond = "figure.walk.diamond"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case figureWalkDiamondFill = "figure.walk.diamond.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureWalkArrival = "figure.walk.arrival"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureWalkDeparture = "figure.walk.departure"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureWalkMotion = "figure.walk.motion"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case figureWave = "figure.wave"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case figureWaveCircle = "figure.wave.circle"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case figureWaveCircleFill = "figure.wave.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureFall = "figure.fall"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureFallCircle = "figure.fall.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureFallCircleFill = "figure.fall.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureRun = "figure.run"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureRunCircle = "figure.run.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureRunCircleFill = "figure.run.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureRunSquareStack = "figure.run.square.stack"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureRunSquareStackFill = "figure.run.square.stack.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case figureRoll = "figure.roll"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureRollRunningpace = "figure.roll.runningpace"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureAmericanFootball = "figure.american.football"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureArchery = "figure.archery"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureAustralianFootball = "figure.australian.football"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureBadminton = "figure.badminton"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureBarre = "figure.barre"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureBaseball = "figure.baseball"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureBasketball = "figure.basketball"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureBowling = "figure.bowling"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureBoxing = "figure.boxing"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureClimbing = "figure.climbing"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureCooldown = "figure.cooldown"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureCoreTraining = "figure.core.training"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureCricket = "figure.cricket"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureSkiingCrosscountry = "figure.skiing.crosscountry"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureCrossTraining = "figure.cross.training"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureCurling = "figure.curling"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureDance = "figure.dance"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureDiscSports = "figure.disc.sports"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureSkiingDownhill = "figure.skiing.downhill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureElliptical = "figure.elliptical"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureEquestrianSports = "figure.equestrian.sports"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureFencing = "figure.fencing"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureFishing = "figure.fishing"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureFlexibility = "figure.flexibility"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureStrengthtrainingFunctional = "figure.strengthtraining.functional"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureGolf = "figure.golf"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureGymnastics = "figure.gymnastics"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureHandCycling = "figure.hand.cycling"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureHandball = "figure.handball"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureHighintensityIntervaltraining = "figure.highintensity.intervaltraining"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureHiking = "figure.hiking"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureHockey = "figure.hockey"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureHunting = "figure.hunting"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureIndoorCycle = "figure.indoor.cycle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureJumprope = "figure.jumprope"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureKickboxing = "figure.kickboxing"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureLacrosse = "figure.lacrosse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureMartialArts = "figure.martial.arts"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureMindAndBody = "figure.mind.and.body"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureMixedCardio = "figure.mixed.cardio"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureOpenWaterSwim = "figure.open.water.swim"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureOutdoorCycle = "figure.outdoor.cycle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case oar2Crossed = "oar.2.crossed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figurePickleball = "figure.pickleball"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figurePilates = "figure.pilates"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figurePlay = "figure.play"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figurePoolSwim = "figure.pool.swim"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureRacquetball = "figure.racquetball"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureRolling = "figure.rolling"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureRower = "figure.rower"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureRugby = "figure.rugby"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureSailing = "figure.sailing"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureSkating = "figure.skating"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureSnowboarding = "figure.snowboarding"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureSoccer = "figure.soccer"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureSocialdance = "figure.socialdance"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureSoftball = "figure.softball"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureSquash = "figure.squash"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureStairStepper = "figure.stair.stepper"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureStairs = "figure.stairs"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureStepTraining = "figure.step.training"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureSurfing = "figure.surfing"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureTableTennis = "figure.table.tennis"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureTaichi = "figure.taichi"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureTennis = "figure.tennis"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureTrackAndField = "figure.track.and.field"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureStrengthtrainingTraditional = "figure.strengthtraining.traditional"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureVolleyball = "figure.volleyball"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureWaterFitness = "figure.water.fitness"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureWaterpolo = "figure.waterpolo"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureWrestling = "figure.wrestling"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case figureYoga = "figure.yoga"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case baseballDiamondBases = "baseball.diamond.bases"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dumbbell = "dumbbell"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dumbbellFill = "dumbbell.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case sportscourt = "sportscourt"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case sportscourtFill = "sportscourt.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sportscourtCircle = "sportscourt.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sportscourtCircleFill = "sportscourt.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case lane = "lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _1Lane = "1.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _2Lane = "2.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _3Lane = "3.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _4Lane = "4.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _5Lane = "5.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _6Lane = "6.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _7Lane = "7.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _8Lane = "8.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _9Lane = "9.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _10Lane = "10.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _11Lane = "11.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _12Lane = "12.lane"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case soccerball = "soccerball"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case soccerballInverse = "soccerball.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case soccerballCircle = "soccerball.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case soccerballCircleInverse = "soccerball.circle.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case soccerballCircleFill = "soccerball.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case soccerballCircleFillInverse = "soccerball.circle.fill.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case baseball = "baseball"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case baseballFill = "baseball.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case baseballCircle = "baseball.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case baseballCircleFill = "baseball.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case basketball = "basketball"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case basketballFill = "basketball.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case basketballCircle = "basketball.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case basketballCircleFill = "basketball.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case football = "football"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case footballFill = "football.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case footballCircle = "football.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case footballCircleFill = "football.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tennisRacket = "tennis.racket"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tennisRacketCircle = "tennis.racket.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tennisRacketCircleFill = "tennis.racket.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hockeyPuck = "hockey.puck"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hockeyPuckFill = "hockey.puck.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hockeyPuckCircle = "hockey.puck.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hockeyPuckCircleFill = "hockey.puck.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cricketBall = "cricket.ball"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cricketBallFill = "cricket.ball.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cricketBallCircle = "cricket.ball.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cricketBallCircleFill = "cricket.ball.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tennisball = "tennisball"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tennisballFill = "tennisball.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tennisballCircle = "tennisball.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tennisballCircleFill = "tennisball.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case volleyball = "volleyball"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case volleyballFill = "volleyball.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case volleyballCircle = "volleyball.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case volleyballCircleFill = "volleyball.circle.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case rosette = "rosette"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case trophy = "trophy"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case trophyFill = "trophy.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case trophyCircle = "trophy.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case trophyCircleFill = "trophy.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case medal = "medal"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case medalFill = "medal.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case command = "command"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -777,10 +1229,70 @@ enum SFSymbol: String, Codable {
     case commandSquare = "command.square"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case commandSquareFill = "command.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case space = "space"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case option = "option"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case alt = "alt"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case control = "control"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case projective = "projective"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chevronLeftToLine = "chevron.left.to.line"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chevronRightToLine = "chevron.right.to.line"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chevronBackwardToLine = "chevron.backward.to.line"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chevronForwardToLine = "chevron.forward.to.line"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case escape = "escape"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case restart = "restart"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case restartCircle = "restart.circle"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case restartCircleFill = "restart.circle.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case sleep = "sleep"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case sleepCircle = "sleep.circle"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case sleepCircleFill = "sleep.circle.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case wake = "wake"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case wakeCircle = "wake.circle"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case wakeCircleFill = "wake.circle.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case fn = "fn"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case lightMin = "light.min"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case lightMax = "light.max"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case power = "power"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case powerCircle = "power.circle"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case powerCircleFill = "power.circle.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case powerDotted = "power.dotted"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case togglepower = "togglepower"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case poweron = "poweron"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case poweroff = "poweroff"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case powersleep = "powersleep"
+    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
+    case directcurrent = "directcurrent"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case alternatingcurrent = "alternatingcurrent"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case clear = "clear"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -810,49 +1322,87 @@ enum SFSymbol: String, Codable {
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case capslockFill = "capslock.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case escape = "escape"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case restart = "restart"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case restartCircle = "restart.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case restartCircleFill = "restart.circle.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case sleep = "sleep"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case sleepCircle = "sleep.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case sleepCircleFill = "sleep.circle.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case wake = "wake"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case wakeCircle = "wake.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case wakeCircleFill = "wake.circle.fill"
+    case eject = "eject"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case power = "power"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case powerCircle = "power.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case powerCircleFill = "power.circle.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case powerDotted = "power.dotted"
+    case ejectFill = "eject.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case togglepower = "togglepower"
+    case ejectCircle = "eject.circle"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case poweron = "poweron"
+    case ejectCircleFill = "eject.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case poweroff = "poweroff"
+    case mount = "mount"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case powersleep = "powersleep"
-    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
-    case directcurrent = "directcurrent"
+    case mountFill = "mount.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case rays = "rays"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case cursorarrowRays = "cursorarrow.rays"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case slowmo = "slowmo"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case timelapse = "timelapse"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case cursorarrow = "cursorarrow"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case cursorarrowSquare = "cursorarrow.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cursorarrowSquareFill = "cursorarrow.square.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case cursorarrowMotionlines = "cursorarrow.motionlines"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case cursorarrowMotionlinesClick = "cursorarrow.motionlines.click"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case cursorarrowClickBadgeClock = "cursorarrow.click.badge.clock"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case cursorarrowAndSquareOnSquareDashed = "cursorarrow.and.square.on.square.dashed"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case cursorarrowClick = "cursorarrow.click"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case cursorarrowClick2 = "cursorarrow.click.2"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case contextualmenuAndCursorarrow = "contextualmenu.and.cursorarrow"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case filemenuAndCursorarrow = "filemenu.and.cursorarrow"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case filemenuAndCursorarrowRtl = "filemenu.and.cursorarrow.rtl"
+    @available(watchOS 8.5, iOS 15.4, macOS 12.3, tvOS 15.4, *)
+    case dotsAndLineVerticalAndCursorarrowRectangle = "dots.and.line.vertical.and.cursorarrow.rectangle"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case filemenuAndSelection = "filemenu.and.selection"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case alternatingcurrent = "alternatingcurrent"
+    case dotCircleAndHandPointUpLeftFill = "dot.circle.and.hand.point.up.left.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case dotCircleAndCursorarrow = "dot.circle.and.cursorarrow"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case keyboard = "keyboard"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case keyboardFill = "keyboard.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case keyboardBadgeEllipsis = "keyboard.badge.ellipsis"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case keyboardBadgeEllipsisFill = "keyboard.badge.ellipsis.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case keyboardBadgeEye = "keyboard.badge.eye"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case keyboardBadgeEyeFill = "keyboard.badge.eye.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case keyboardChevronCompactDown = "keyboard.chevron.compact.down"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case keyboardChevronCompactDownFill = "keyboard.chevron.compact.down.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case keyboardChevronCompactLeft = "keyboard.chevron.compact.left"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case keyboardChevronCompactLeftFill = "keyboard.chevron.compact.left.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case keyboardOnehandedLeft = "keyboard.onehanded.left"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case keyboardOnehandedLeftFill = "keyboard.onehanded.left.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case keyboardOnehandedRight = "keyboard.onehanded.right"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case keyboardOnehandedRightFill = "keyboard.onehanded.right.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case peacesign = "peacesign"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case dotArrowtrianglesUpRightDownLeftCircle = "dot.arrowtriangles.up.right.down.left.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case globe = "globe"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -873,6 +1423,10 @@ enum SFSymbol: String, Codable {
     case globeAsiaAustralia = "globe.asia.australia"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case globeAsiaAustraliaFill = "globe.asia.australia.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case globeCentralSouthAsia = "globe.central.south.asia"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case globeCentralSouthAsiaFill = "globe.central.south.asia.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sunMin = "sun.min"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -885,26 +1439,84 @@ enum SFSymbol: String, Codable {
     case sunMaxCircle = "sun.max.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case sunMaxCircleFill = "sun.max.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sunMaxTrianglebadgeExclamationmark = "sun.max.trianglebadge.exclamationmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sunMaxTrianglebadgeExclamationmarkFill = "sun.max.trianglebadge.exclamationmark.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sunrise = "sunrise"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sunriseFill = "sunrise.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sunriseCircle = "sunrise.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sunriseCircleFill = "sunrise.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sunset = "sunset"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sunsetFill = "sunset.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sunsetCircle = "sunset.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sunsetCircleFill = "sunset.circle.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case sunAndHorizon = "sun.and.horizon"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case sunAndHorizonFill = "sun.and.horizon.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sunAndHorizonCircle = "sun.and.horizon.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sunAndHorizonCircleFill = "sun.and.horizon.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sunDust = "sun.dust"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sunDustFill = "sun.dust.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sunDustCircle = "sun.dust.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sunDustCircleFill = "sun.dust.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sunHaze = "sun.haze"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sunHazeFill = "sun.haze.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sunHazeCircle = "sun.haze.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sunHazeCircleFill = "sun.haze.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseNewMoon = "moonphase.new.moon"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseWaxingCrescent = "moonphase.waxing.crescent"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseFirstQuarter = "moonphase.first.quarter"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseWaxingGibbous = "moonphase.waxing.gibbous"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseFullMoon = "moonphase.full.moon"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseWaningGibbous = "moonphase.waning.gibbous"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseLastQuarter = "moonphase.last.quarter"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseWaningCrescent = "moonphase.waning.crescent"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseNewMoonInverse = "moonphase.new.moon.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseWaxingCrescentInverse = "moonphase.waxing.crescent.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseFirstQuarterInverse = "moonphase.first.quarter.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseWaxingGibbousInverse = "moonphase.waxing.gibbous.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseFullMoonInverse = "moonphase.full.moon.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseWaningGibbousInverse = "moonphase.waning.gibbous.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseLastQuarterInverse = "moonphase.last.quarter.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonphaseWaningCrescentInverse = "moonphase.waning.crescent.inverse"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case zzz = "zzz"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case moon = "moon"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -913,8 +1525,14 @@ enum SFSymbol: String, Codable {
     case moonCircle = "moon.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case moonCircleFill = "moon.circle.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case zzz = "zzz"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonHaze = "moon.haze"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonHazeFill = "moon.haze.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonHazeCircle = "moon.haze.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonHazeCircleFill = "moon.haze.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case moonZzz = "moon.zzz"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -927,98 +1545,206 @@ enum SFSymbol: String, Codable {
     case moonStars = "moon.stars"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case moonStarsFill = "moon.stars.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonStarsCircle = "moon.stars.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case moonStarsCircleFill = "moon.stars.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloud = "cloud"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudFill = "cloud.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudCircle = "cloud.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudCircleFill = "cloud.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudDrizzle = "cloud.drizzle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudDrizzleFill = "cloud.drizzle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudDrizzleCircle = "cloud.drizzle.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudDrizzleCircleFill = "cloud.drizzle.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudRain = "cloud.rain"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudRainFill = "cloud.rain.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudRainCircle = "cloud.rain.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudRainCircleFill = "cloud.rain.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudHeavyrain = "cloud.heavyrain"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudHeavyrainFill = "cloud.heavyrain.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudHeavyrainCircle = "cloud.heavyrain.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudHeavyrainCircleFill = "cloud.heavyrain.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudFog = "cloud.fog"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudFogFill = "cloud.fog.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudFogCircle = "cloud.fog.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudFogCircleFill = "cloud.fog.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudHail = "cloud.hail"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudHailFill = "cloud.hail.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudHailCircle = "cloud.hail.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudHailCircleFill = "cloud.hail.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudSnow = "cloud.snow"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudSnowFill = "cloud.snow.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudSnowCircle = "cloud.snow.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudSnowCircleFill = "cloud.snow.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudSleet = "cloud.sleet"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudSleetFill = "cloud.sleet.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudSleetCircle = "cloud.sleet.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudSleetCircleFill = "cloud.sleet.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudBolt = "cloud.bolt"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudBoltFill = "cloud.bolt.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudBoltCircle = "cloud.bolt.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudBoltCircleFill = "cloud.bolt.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudBoltRain = "cloud.bolt.rain"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudBoltRainFill = "cloud.bolt.rain.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudBoltRainCircle = "cloud.bolt.rain.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudBoltRainCircleFill = "cloud.bolt.rain.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudSun = "cloud.sun"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudSunFill = "cloud.sun.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudSunCircle = "cloud.sun.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudSunCircleFill = "cloud.sun.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudSunRain = "cloud.sun.rain"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudSunRainFill = "cloud.sun.rain.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudSunRainCircle = "cloud.sun.rain.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudSunRainCircleFill = "cloud.sun.rain.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudSunBolt = "cloud.sun.bolt"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudSunBoltFill = "cloud.sun.bolt.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudSunBoltCircle = "cloud.sun.bolt.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudSunBoltCircleFill = "cloud.sun.bolt.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudMoon = "cloud.moon"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudMoonFill = "cloud.moon.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudMoonCircle = "cloud.moon.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudMoonCircleFill = "cloud.moon.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudMoonRain = "cloud.moon.rain"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudMoonRainFill = "cloud.moon.rain.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudMoonRainCircle = "cloud.moon.rain.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudMoonRainCircleFill = "cloud.moon.rain.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudMoonBolt = "cloud.moon.bolt"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cloudMoonBoltFill = "cloud.moon.bolt.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudMoonBoltCircle = "cloud.moon.bolt.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cloudMoonBoltCircleFill = "cloud.moon.bolt.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case smoke = "smoke"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case smokeFill = "smoke.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case smokeCircle = "smoke.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case smokeCircleFill = "smoke.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case wind = "wind"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windCircle = "wind.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windCircleFill = "wind.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case windSnow = "wind.snow"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windSnowCircle = "wind.snow.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windSnowCircleFill = "wind.snow.circle.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case snowflake = "snowflake"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case snowflakeCircle = "snowflake.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case snowflakeCircleFill = "snowflake.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case snowflakeSlash = "snowflake.slash"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case tornado = "tornado"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tornadoCircle = "tornado.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tornadoCircleFill = "tornado.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case tropicalstorm = "tropicalstorm"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tropicalstormCircle = "tropicalstorm.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tropicalstormCircleFill = "tropicalstorm.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case hurricane = "hurricane"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hurricaneCircle = "hurricane.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hurricaneCircleFill = "hurricane.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case thermometerSun = "thermometer.sun"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case thermometerSunFill = "thermometer.sun.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case thermometerSunCircle = "thermometer.sun.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case thermometerSunCircleFill = "thermometer.sun.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case thermometerSnowflake = "thermometer.snowflake"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case thermometer = "thermometer"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case thermometerSnowflakeCircle = "thermometer.snowflake.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case thermometerSnowflakeCircleFill = "thermometer.snowflake.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case thermometerLow = "thermometer.low"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case thermometerMedium = "thermometer.medium"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case thermometerHigh = "thermometer.high"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case thermometerMediumSlash = "thermometer.medium.slash"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case aqiLow = "aqi.low"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
@@ -1029,178 +1755,16 @@ enum SFSymbol: String, Codable {
     case humidity = "humidity"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case humidityFill = "humidity.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case umbrella = "umbrella"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case umbrellaFill = "umbrella.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case flame = "flame"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case flameFill = "flame.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case flameCircle = "flame.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case flameCircleFill = "flame.circle.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case lightMin = "light.min"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case lightMax = "light.max"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case rays = "rays"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case slowmo = "slowmo"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case timelapse = "timelapse"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case cursorarrowRays = "cursorarrow.rays"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case cursorarrow = "cursorarrow"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case cursorarrowSquare = "cursorarrow.square"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case cursorarrowAndSquareOnSquareDashed = "cursorarrow.and.square.on.square.dashed"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case cursorarrowClick = "cursorarrow.click"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case cursorarrowClick2 = "cursorarrow.click.2"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case contextualmenuAndCursorarrow = "contextualmenu.and.cursorarrow"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case filemenuAndCursorarrow = "filemenu.and.cursorarrow"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case filemenuAndCursorarrowRtl = "filemenu.and.cursorarrow.rtl"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case filemenuAndSelection = "filemenu.and.selection"
-    @available(watchOS 8.5, iOS 15.4, macOS 12.3, tvOS 15.4, *)
-    case dotsAndLineVerticalAndCursorarrowRectangle = "dots.and.line.vertical.and.cursorarrow.rectangle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case dotCircleAndHandPointUpLeftFill = "dot.circle.and.hand.point.up.left.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case dotCircleAndCursorarrow = "dot.circle.and.cursorarrow"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case cursorarrowMotionlines = "cursorarrow.motionlines"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case cursorarrowMotionlinesClick = "cursorarrow.motionlines.click"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case cursorarrowClickBadgeClock = "cursorarrow.click.badge.clock"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case keyboard = "keyboard"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case keyboardFill = "keyboard.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case keyboardBadgeEllipsis = "keyboard.badge.ellipsis"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case keyboardChevronCompactDown = "keyboard.chevron.compact.down"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case keyboardChevronCompactLeft = "keyboard.chevron.compact.left"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case keyboardOnehandedLeft = "keyboard.onehanded.left"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case keyboardOnehandedRight = "keyboard.onehanded.right"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case rectangle3Group = "rectangle.3.group"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case rectangle3GroupFill = "rectangle.3.group.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case squareGrid3X2 = "square.grid.3x2"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case squareGrid3X2Fill = "square.grid.3x2.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case rectangleGrid3X2 = "rectangle.grid.3x2"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case rectangleGrid3X2Fill = "rectangle.grid.3x2.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case squareGrid2X2 = "square.grid.2x2"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case squareGrid2X2Fill = "square.grid.2x2.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case rectangleGrid2X2 = "rectangle.grid.2x2"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case rectangleGrid2X2Fill = "rectangle.grid.2x2.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case squareGrid3X1BelowLineGrid1X2 = "square.grid.3x1.below.line.grid.1x2"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case squareGrid3X1BelowLineGrid1X2Fill = "square.grid.3x1.below.line.grid.1x2.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case squareGrid4X3Fill = "square.grid.4x3.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case rectangleGrid1X2 = "rectangle.grid.1x2"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case rectangleGrid1X2Fill = "rectangle.grid.1x2.fill"
-    @available(watchOS 6.1, iOS 13.1, macOS 10.15, tvOS 13.0, *)
-    case circleGrid2X2 = "circle.grid.2x2"
-    @available(watchOS 6.1, iOS 13.1, macOS 10.15, tvOS 13.0, *)
-    case circleGrid2X2Fill = "circle.grid.2x2.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case circleGrid3X3 = "circle.grid.3x3"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case circleGrid3X3Fill = "circle.grid.3x3.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleGrid3X3Circle = "circle.grid.3x3.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleGrid3X3CircleFill = "circle.grid.3x3.circle.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case squareGrid3X3 = "square.grid.3x3"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case squareGrid3X3Fill = "square.grid.3x3.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case squareGrid3X3TopleftFilled = "square.grid.3x3.topleft.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case squareGrid3X3TopmiddleFilled = "square.grid.3x3.topmiddle.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case squareGrid3X3ToprightFilled = "square.grid.3x3.topright.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case squareGrid3X3MiddleleftFilled = "square.grid.3x3.middleleft.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case squareGrid3X3MiddleFilled = "square.grid.3x3.middle.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case squareGrid3X3MiddlerightFilled = "square.grid.3x3.middleright.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case squareGrid3X3BottomleftFilled = "square.grid.3x3.bottomleft.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case squareGrid3X3BottommiddleFilled = "square.grid.3x3.bottommiddle.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case squareGrid3X3BottomrightFilled = "square.grid.3x3.bottomright.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleHexagongrid = "circle.hexagongrid"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleHexagongridFill = "circle.hexagongrid.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleHexagongridCircle = "circle.hexagongrid.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleHexagongridCircleFill = "circle.hexagongrid.circle.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleHexagonpath = "circle.hexagonpath"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleHexagonpathFill = "circle.hexagonpath.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case circleGridCross = "circle.grid.cross"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case circleGridCrossFill = "circle.grid.cross.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleGridCrossLeftFilled = "circle.grid.cross.left.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleGridCrossUpFilled = "circle.grid.cross.up.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleGridCrossRightFilled = "circle.grid.cross.right.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleGridCrossDownFilled = "circle.grid.cross.down.filled"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case seal = "seal"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case sealFill = "seal.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case checkmarkSeal = "checkmark.seal"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case checkmarkSealFill = "checkmark.seal.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case xmarkSeal = "xmark.seal"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case xmarkSealFill = "xmark.seal.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case exclamationmarkTriangle = "exclamationmark.triangle"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case exclamationmarkTriangleFill = "exclamationmark.triangle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case waterWaves = "water.waves"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case waterWavesSlash = "water.waves.slash"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case waterWavesAndArrowUp = "water.waves.and.arrow.up"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case waterWavesAndArrowDown = "water.waves.and.arrow.down"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case waterWavesAndArrowDownTrianglebadgeExclamationmark = "water.waves.and.arrow.down.trianglebadge.exclamationmark"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case drop = "drop"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -1209,10 +1773,46 @@ enum SFSymbol: String, Codable {
     case dropCircle = "drop.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case dropCircleFill = "drop.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dropDegreesign = "drop.degreesign"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dropDegreesignFill = "drop.degreesign.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dropDegreesignSlash = "drop.degreesign.slash"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dropDegreesignSlashFill = "drop.degreesign.slash.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dropDegreesignSlashRtl = "drop.degreesign.slash.rtl"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dropDegreesignSlashFillRtl = "drop.degreesign.slash.fill.rtl"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case dropTriangle = "drop.triangle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case dropTriangleFill = "drop.triangle.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case flame = "flame"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case flameFill = "flame.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case flameCircle = "flame.circle"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case flameCircleFill = "flame.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case beachUmbrella = "beach.umbrella"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case beachUmbrellaFill = "beach.umbrella.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case umbrella = "umbrella"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case umbrellaFill = "umbrella.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case umbrellaPercent = "umbrella.percent"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case umbrellaPercentFill = "umbrella.percent.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case umbrellaPercentAr = "umbrella.percent.ar"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case umbrellaPercentFillAr = "umbrella.percent.fill.ar"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case play = "play"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -1229,6 +1829,10 @@ enum SFSymbol: String, Codable {
     case playRectangle = "play.rectangle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case playRectangleFill = "play.rectangle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case playSquareStack = "play.square.stack"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case playSquareStackFill = "play.square.stack.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case playSlash = "play.slash"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -1261,6 +1865,10 @@ enum SFSymbol: String, Codable {
     case playpause = "playpause"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case playpauseFill = "playpause.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case playpauseCircle = "playpause.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case playpauseCircleFill = "playpause.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case backward = "backward"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -1281,10 +1889,18 @@ enum SFSymbol: String, Codable {
     case backwardEnd = "backward.end"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case backwardEndFill = "backward.end.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case backwardEndCircle = "backward.end.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case backwardEndCircleFill = "backward.end.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case forwardEnd = "forward.end"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case forwardEndFill = "forward.end.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case forwardEndCircle = "forward.end.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case forwardEndCircleFill = "forward.end.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case backwardEndAlt = "backward.end.alt"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -1301,18 +1917,6 @@ enum SFSymbol: String, Codable {
     case forwardFrame = "forward.frame"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case forwardFrameFill = "forward.frame.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case eject = "eject"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case ejectFill = "eject.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case ejectCircle = "eject.circle"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case ejectCircleFill = "eject.circle.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case mount = "mount"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case mountFill = "mount.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case memories = "memories"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -1355,6 +1959,12 @@ enum SFSymbol: String, Codable {
     case infinityCircle = "infinity.circle"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case infinityCircleFill = "infinity.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case sos = "sos"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case sosCircle = "sos.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case sosCircleFill = "sos.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case megaphone = "megaphone"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -1367,6 +1977,18 @@ enum SFSymbol: String, Codable {
     case speakerCircle = "speaker.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case speakerCircleFill = "speaker.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case speakerSquare = "speaker.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case speakerSquareFill = "speaker.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case speakerPlus = "speaker.plus"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case speakerPlusFill = "speaker.plus.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case speakerMinus = "speaker.minus"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case speakerMinusFill = "speaker.minus.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case speakerSlash = "speaker.slash"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -1587,6 +2209,14 @@ enum SFSymbol: String, Codable {
     case micBadgePlus = "mic.badge.plus"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case micFillBadgePlus = "mic.fill.badge.plus"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case micBadgeXmark = "mic.badge.xmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case micFillBadgeXmark = "mic.fill.badge.xmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case micAndSignalMeter = "mic.and.signal.meter"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case micAndSignalMeterFill = "mic.and.signal.meter.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case lineDiagonal = "line.diagonal"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -1613,12 +2243,18 @@ enum SFSymbol: String, Codable {
     case smallcircleFilledCircle = "smallcircle.filled.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case smallcircleFilledCircleFill = "smallcircle.filled.circle.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case smallcircleCircle = "smallcircle.circle"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case smallcircleCircleFill = "smallcircle.circle.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case target = "target"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case circleDotted = "circle.dotted"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case circleDashed = "circle.dashed"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case circleDashedInsetFilled = "circle.dashed.inset.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleDotted = "circle.dotted"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case circlebadge = "circlebadge"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -1627,68 +2263,38 @@ enum SFSymbol: String, Codable {
     case circlebadge2 = "circlebadge.2"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case circlebadge2Fill = "circlebadge.2.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case circleGrid2X1 = "circle.grid.2x1"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case circleGrid2X1Fill = "circle.grid.2x1.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case circleGrid2X1LeftFilled = "circle.grid.2x1.left.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case circleGrid2X1RightFilled = "circle.grid.2x1.right.filled"
+    @available(watchOS 6.1, iOS 13.1, macOS 10.15, tvOS 13.0, *)
+    case circleGrid2X2 = "circle.grid.2x2"
+    @available(watchOS 6.1, iOS 13.1, macOS 10.15, tvOS 13.0, *)
+    case circleGrid2X2Fill = "circle.grid.2x2.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case smallcircleCircle = "smallcircle.circle"
+    case circleGrid3X3 = "circle.grid.3x3"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case smallcircleCircleFill = "smallcircle.circle.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case target = "target"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case capsule = "capsule"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case capsuleFill = "capsule.fill"
+    case circleGrid3X3Fill = "circle.grid.3x3.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case capsuleLefthalfFilled = "capsule.lefthalf.filled"
+    case circleGrid3X3Circle = "circle.grid.3x3.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case capsuleRighthalfFilled = "capsule.righthalf.filled"
+    case circleGrid3X3CircleFill = "circle.grid.3x3.circle.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case capsuleTophalfFilled = "capsule.tophalf.filled"
+    case circleHexagonpath = "circle.hexagonpath"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case capsuleBottomhalfFilled = "capsule.bottomhalf.filled"
+    case circleHexagonpathFill = "circle.hexagonpath.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case capsuleInsetFilled = "capsule.inset.filled"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case capsulePortrait = "capsule.portrait"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case capsulePortraitFill = "capsule.portrait.fill"
+    case circleHexagongrid = "circle.hexagongrid"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case capsulePortraitLefthalfFilled = "capsule.portrait.lefthalf.filled"
+    case circleHexagongridFill = "circle.hexagongrid.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case capsulePortraitRighthalfFilled = "capsule.portrait.righthalf.filled"
+    case circleHexagongridCircle = "circle.hexagongrid.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case capsulePortraitTophalfFilled = "capsule.portrait.tophalf.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case capsulePortraitBottomhalfFilled = "capsule.portrait.bottomhalf.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case capsulePortraitInsetFilled = "capsule.portrait.inset.filled"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case oval = "oval"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case ovalFill = "oval.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case ovalLefthalfFilled = "oval.lefthalf.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case ovalRighthalfFilled = "oval.righthalf.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case ovalTophalfFilled = "oval.tophalf.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case ovalBottomhalfFilled = "oval.bottomhalf.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case ovalInsetFilled = "oval.inset.filled"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case ovalPortrait = "oval.portrait"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case ovalPortraitFill = "oval.portrait.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case ovalPortraitLefthalfFilled = "oval.portrait.lefthalf.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case ovalPortraitRighthalfFilled = "oval.portrait.righthalf.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case ovalPortraitTophalfFilled = "oval.portrait.tophalf.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case ovalPortraitBottomhalfFilled = "oval.portrait.bottomhalf.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case ovalPortraitInsetFilled = "oval.portrait.inset.filled"
+    case circleHexagongridCircleFill = "circle.hexagongrid.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case placeholdertextFill = "placeholdertext.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -1729,14 +2335,20 @@ enum SFSymbol: String, Codable {
     case squareSplitDiagonal = "square.split.diagonal"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case squareSplitDiagonalFill = "square.split.diagonal.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case dotSquare = "dot.square"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case dotSquareFill = "dot.square.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case circleSquare = "circle.square"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleSquareFill = "circle.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squareTopthirdInsetFilled = "square.topthird.inset.filled"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squareBottomthirdInsetFilled = "square.bottomthird.inset.filled"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squareLeftthirdInsetFilled = "square.leftthird.inset.filled"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squareRightthirdInsetFilled = "square.rightthird.inset.filled"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squareLeadingthirdInsetFilled = "square.leadingthird.inset.filled"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squareTrailingthirdInsetFilled = "square.trailingthird.inset.filled"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squareDotted = "square.dotted"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case squareDashed = "square.dashed"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -1748,6 +2360,14 @@ enum SFSymbol: String, Codable {
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case questionmarkSquareDashedAr = "questionmark.square.dashed.ar"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case dotSquare = "dot.square"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case dotSquareFill = "dot.square.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case circleSquare = "circle.square"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case circleSquareFill = "circle.square.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case squareOnSquare = "square.on.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case squareFillOnSquareFill = "square.fill.on.square.fill"
@@ -1757,10 +2377,16 @@ enum SFSymbol: String, Codable {
     case handRaisedSquareOnSquare = "hand.raised.square.on.square"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case handRaisedSquareOnSquareFill = "hand.raised.square.on.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case starSquareOnSquare = "star.square.on.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case starSquareOnSquareFill = "star.square.on.square.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case sparklesSquareFilledOnSquare = "sparkles.square.filled.on.square"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case squareOnSquareDashed = "square.on.square.dashed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squareOnSquareIntersectionDashed = "square.on.square.intersection.dashed"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case plusSquareOnSquare = "plus.square.on.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -1786,21 +2412,73 @@ enum SFSymbol: String, Codable {
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case squareStackFill = "square.stack.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case squareGrid3X3 = "square.grid.3x3"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case squareGrid3X3Fill = "square.grid.3x3.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case squareGrid3X3TopleftFilled = "square.grid.3x3.topleft.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case squareGrid3X3TopmiddleFilled = "square.grid.3x3.topmiddle.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case squareGrid3X3ToprightFilled = "square.grid.3x3.topright.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case squareGrid3X3MiddleleftFilled = "square.grid.3x3.middleleft.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case squareGrid3X3MiddleFilled = "square.grid.3x3.middle.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case squareGrid3X3MiddlerightFilled = "square.grid.3x3.middleright.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case squareGrid3X3BottomleftFilled = "square.grid.3x3.bottomleft.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case squareGrid3X3BottommiddleFilled = "square.grid.3x3.bottommiddle.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case squareGrid3X3BottomrightFilled = "square.grid.3x3.bottomright.filled"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case squareGrid3X1BelowLineGrid1X2 = "square.grid.3x1.below.line.grid.1x2"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case squareGrid3X1BelowLineGrid1X2Fill = "square.grid.3x1.below.line.grid.1x2.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case squareGrid4X3Fill = "square.grid.4x3.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case squareshape = "squareshape"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case squareshapeFill = "squareshape.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case squareshapeDashedSquareshape = "squareshape.dashed.squareshape"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case squareshapeSquareshapeDashed = "squareshape.squareshape.dashed"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case dotSquareshape = "dot.squareshape"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case dotSquareshapeFill = "dot.squareshape.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case squareshapeDashedSquareshape = "squareshape.dashed.squareshape"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case squareshapeSquareshapeDashed = "squareshape.squareshape.dashed"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case app = "app"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case appFill = "app.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case plusApp = "plus.app"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case plusAppFill = "plus.app.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case arrowDownApp = "arrow.down.app"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case arrowDownAppFill = "arrow.down.app.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case arrowUpForwardApp = "arrow.up.forward.app"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case arrowUpForwardAppFill = "arrow.up.forward.app.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case xmarkApp = "xmark.app"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case xmarkAppFill = "xmark.app.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case questionmarkApp = "questionmark.app"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case questionmarkAppFill = "questionmark.app.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case questionmarkAppAr = "questionmark.app.ar"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case questionmarkAppFillAr = "questionmark.app.fill.ar"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case rectangle = "rectangle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -1851,6 +2529,8 @@ enum SFSymbol: String, Codable {
     case tablecellsFillBadgeEllipsis = "tablecells.fill.badge.ellipsis"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case rectangleSplit3X3 = "rectangle.split.3x3"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case rectangleSplit3X3Fill = "rectangle.split.3x3.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case rectangleInsetFilled = "rectangle.inset.filled"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -1939,6 +2619,30 @@ enum SFSymbol: String, Codable {
     case plusRectangleOnRectangle = "plus.rectangle.on.rectangle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case plusRectangleFillOnRectangleFill = "plus.rectangle.fill.on.rectangle.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case rectangle3Group = "rectangle.3.group"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case rectangle3GroupFill = "rectangle.3.group.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case squareGrid2X2 = "square.grid.2x2"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case squareGrid2X2Fill = "square.grid.2x2.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case rectangleGrid2X2 = "rectangle.grid.2x2"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case rectangleGrid2X2Fill = "rectangle.grid.2x2.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case squareGrid3X2 = "square.grid.3x2"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case squareGrid3X2Fill = "square.grid.3x2.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case rectangleGrid3X2 = "rectangle.grid.3x2"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case rectangleGrid3X2Fill = "rectangle.grid.3x2.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case rectangleGrid1X2 = "rectangle.grid.1x2"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case rectangleGrid1X2Fill = "rectangle.grid.1x2.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case rectanglePortrait = "rectangle.portrait"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -2007,6 +2711,10 @@ enum SFSymbol: String, Codable {
     case rectanglePortraitOnRectanglePortraitSlash = "rectangle.portrait.on.rectangle.portrait.slash"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case rectanglePortraitOnRectanglePortraitSlashFill = "rectangle.portrait.on.rectangle.portrait.slash.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case rectanglePortraitOnRectanglePortraitAngled = "rectangle.portrait.on.rectangle.portrait.angled"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case rectanglePortraitOnRectanglePortraitAngledFill = "rectangle.portrait.on.rectangle.portrait.angled.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case rectanglePortraitSplit2X1 = "rectangle.portrait.split.2x1"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -2015,6 +2723,62 @@ enum SFSymbol: String, Codable {
     case rectanglePortraitSplit2X1Slash = "rectangle.portrait.split.2x1.slash"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case rectanglePortraitSplit2X1SlashFill = "rectangle.portrait.split.2x1.slash.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case capsule = "capsule"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case capsuleFill = "capsule.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case capsuleLefthalfFilled = "capsule.lefthalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case capsuleRighthalfFilled = "capsule.righthalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case capsuleTophalfFilled = "capsule.tophalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case capsuleBottomhalfFilled = "capsule.bottomhalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case capsuleInsetFilled = "capsule.inset.filled"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case capsulePortrait = "capsule.portrait"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case capsulePortraitFill = "capsule.portrait.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case capsulePortraitLefthalfFilled = "capsule.portrait.lefthalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case capsulePortraitRighthalfFilled = "capsule.portrait.righthalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case capsulePortraitTophalfFilled = "capsule.portrait.tophalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case capsulePortraitBottomhalfFilled = "capsule.portrait.bottomhalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case capsulePortraitInsetFilled = "capsule.portrait.inset.filled"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case oval = "oval"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case ovalFill = "oval.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case ovalLefthalfFilled = "oval.lefthalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case ovalRighthalfFilled = "oval.righthalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case ovalTophalfFilled = "oval.tophalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case ovalBottomhalfFilled = "oval.bottomhalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case ovalInsetFilled = "oval.inset.filled"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case ovalPortrait = "oval.portrait"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case ovalPortraitFill = "oval.portrait.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case ovalPortraitLefthalfFilled = "oval.portrait.lefthalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case ovalPortraitRighthalfFilled = "oval.portrait.righthalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case ovalPortraitTophalfFilled = "oval.portrait.tophalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case ovalPortraitBottomhalfFilled = "oval.portrait.bottomhalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case ovalPortraitInsetFilled = "oval.portrait.inset.filled"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case triangle = "triangle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2029,6 +2793,10 @@ enum SFSymbol: String, Codable {
     case triangleBottomhalfFilled = "triangle.bottomhalf.filled"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case triangleInsetFilled = "triangle.inset.filled"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case exclamationmarkTriangle = "exclamationmark.triangle"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case exclamationmarkTriangleFill = "exclamationmark.triangle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case diamond = "diamond"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -2083,22 +2851,18 @@ enum SFSymbol: String, Codable {
     case pentagonTophalfFilled = "pentagon.tophalf.filled"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case pentagonBottomhalfFilled = "pentagon.bottomhalf.filled"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case seal = "seal"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case sealFill = "seal.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case suitHeart = "suit.heart"
+    case checkmarkSeal = "checkmark.seal"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case suitHeartFill = "suit.heart.fill"
+    case checkmarkSealFill = "checkmark.seal.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case suitClub = "suit.club"
+    case xmarkSeal = "xmark.seal"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case suitClubFill = "suit.club.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case suitSpade = "suit.spade"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case suitSpadeFill = "suit.spade.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case suitDiamond = "suit.diamond"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case suitDiamondFill = "suit.diamond.fill"
+    case xmarkSealFill = "xmark.seal.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case heart = "heart"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2139,16 +2903,36 @@ enum SFSymbol: String, Codable {
     case arrowClockwiseHeart = "arrow.clockwise.heart"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case arrowClockwiseHeartFill = "arrow.clockwise.heart.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fleuron = "fleuron"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fleuronFill = "fleuron.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case rhombus = "rhombus"
+    case suitHeart = "suit.heart"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case rhombusFill = "rhombus.fill"
+    case suitHeartFill = "suit.heart.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case suitClub = "suit.club"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case suitClubFill = "suit.club.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case suitDiamond = "suit.diamond"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case suitDiamondFill = "suit.diamond.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case suitSpade = "suit.spade"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case suitSpadeFill = "suit.spade.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case star = "star"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case starFill = "star.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case starLeadinghalfFilled = "star.leadinghalf.filled"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case starSlash = "star.slash"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case starSlashFill = "star.slash.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case starCircle = "star.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2157,12 +2941,32 @@ enum SFSymbol: String, Codable {
     case starSquare = "star.square"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case starSquareFill = "star.square.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case starSlash = "star.slash"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case starSlashFill = "star.slash.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case lineHorizontalStarFillLineHorizontal = "line.horizontal.star.fill.line.horizontal"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case rhombus = "rhombus"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case rhombusFill = "rhombus.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case shield = "shield"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case shieldFill = "shield.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case shieldLefthalfFilled = "shield.lefthalf.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case shieldRighthalfFilled = "shield.righthalf.filled"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case shieldSlash = "shield.slash"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case shieldSlashFill = "shield.slash.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case shieldLefthalfFilledSlash = "shield.lefthalf.filled.slash"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case checkerboardShield = "checkerboard.shield"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case firewall = "firewall"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case firewallFill = "firewall.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case flag = "flag"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2187,14 +2991,26 @@ enum SFSymbol: String, Codable {
     case flagBadgeEllipsis = "flag.badge.ellipsis"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case flagBadgeEllipsisFill = "flag.badge.ellipsis.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case flagCheckered = "flag.checkered"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case flagCheckeredCircle = "flag.checkered.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case flagCheckeredCircleFill = "flag.checkered.circle.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case flag2Crossed = "flag.2.crossed"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case flag2CrossedFill = "flag.2.crossed.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case flag2CrossedCircle = "flag.2.crossed.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case flag2CrossedCircleFill = "flag.2.crossed.circle.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case flagFilledAndFlagCrossed = "flag.filled.and.flag.crossed"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case flagAndFlagFilledCrossed = "flag.and.flag.filled.crossed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case flagCheckered2Crossed = "flag.checkered.2.crossed"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case location = "location"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2211,6 +3027,10 @@ enum SFSymbol: String, Codable {
     case locationSlash = "location.slash"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case locationSlashFill = "location.slash.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case locationSlashCircle = "location.slash.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case locationSlashCircleFill = "location.slash.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case locationNorth = "location.north"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2223,22 +3043,6 @@ enum SFSymbol: String, Codable {
     case locationNorthLine = "location.north.line"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case locationNorthLineFill = "location.north.line.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case sensorTagRadiowavesForward = "sensor.tag.radiowaves.forward"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case sensorTagRadiowavesForwardFill = "sensor.tag.radiowaves.forward.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case airtagRadiowavesForward = "airtag.radiowaves.forward"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case airtagRadiowavesForwardFill = "airtag.radiowaves.forward.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case airtagRadiowavesForwardRtl = "airtag.radiowaves.forward.rtl"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case airtagRadiowavesForwardFillRtl = "airtag.radiowaves.forward.fill.rtl"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case airtag = "airtag"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case airtagFill = "airtag.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case bell = "bell"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2271,6 +3075,10 @@ enum SFSymbol: String, Codable {
     case bellBadgeCircle = "bell.badge.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case bellBadgeCircleFill = "bell.badge.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case bellAndWavesLeftAndRight = "bell.and.waves.left.and.right"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case bellAndWavesLeftAndRightFill = "bell.and.waves.left.and.right.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case tag = "tag"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2299,8 +3107,6 @@ enum SFSymbol: String, Codable {
     case boltSquare = "bolt.square"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case boltSquareFill = "bolt.square.fill"
-    @available(watchOS 8.1, iOS 15.1, macOS 12.0, tvOS 15.1, *)
-    case boltRingClosed = "bolt.ring.closed"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case boltShield = "bolt.shield"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -2313,10 +3119,20 @@ enum SFSymbol: String, Codable {
     case boltSlashCircle = "bolt.slash.circle"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case boltSlashCircleFill = "bolt.slash.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case boltBadgeClock = "bolt.badge.clock"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case boltBadgeClockFill = "bolt.badge.clock.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case boltBadgeA = "bolt.badge.a"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case boltBadgeAFill = "bolt.badge.a.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case boltTrianglebadgeExclamationmark = "bolt.trianglebadge.exclamationmark"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case boltTrianglebadgeExclamationmarkFill = "bolt.trianglebadge.exclamationmark.fill"
+    @available(watchOS 8.1, iOS 15.1, macOS 12.0, tvOS 15.1, *)
+    case boltRingClosed = "bolt.ring.closed"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case boltHorizontal = "bolt.horizontal"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2325,62 +3141,6 @@ enum SFSymbol: String, Codable {
     case boltHorizontalCircle = "bolt.horizontal.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case boltHorizontalCircleFill = "bolt.horizontal.circle.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case eye = "eye"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case eyeFill = "eye.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case eyeCircle = "eye.circle"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case eyeCircleFill = "eye.circle.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case eyeSquare = "eye.square"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case eyeSquareFill = "eye.square.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case eyeSlash = "eye.slash"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case eyeSlashFill = "eye.slash.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case eyeSlashCircle = "eye.slash.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case eyeSlashCircleFill = "eye.slash.circle.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case eyeTrianglebadgeExclamationmark = "eye.trianglebadge.exclamationmark"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case eyeTrianglebadgeExclamationmarkFill = "eye.trianglebadge.exclamationmark.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case tshirt = "tshirt"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case tshirtFill = "tshirt.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case eyes = "eyes"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case eyesInverse = "eyes.inverse"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case eyebrow = "eyebrow"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case nose = "nose"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case noseFill = "nose.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case mustache = "mustache"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case mustacheFill = "mustache.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case mouth = "mouth"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case mouthFill = "mouth.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case eyeglasses = "eyeglasses"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case facemask = "facemask"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case facemaskFill = "facemask.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case brainHeadProfile = "brain.head.profile"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case brain = "brain"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case icloud = "icloud"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2445,6 +3205,8 @@ enum SFSymbol: String, Codable {
     case icloudAndArrowUp = "icloud.and.arrow.up"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case icloudAndArrowUpFill = "icloud.and.arrow.up.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case xSquareroot = "x.squareroot"
     @available(watchOS 6.1, iOS 13.1, macOS 10.15, tvOS 13.0, *)
     case flashlightOffFill = "flashlight.off.fill"
     @available(watchOS 6.1, iOS 13.1, macOS 10.15, tvOS 13.0, *)
@@ -2481,18 +3243,50 @@ enum SFSymbol: String, Codable {
     case messageCircle = "message.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case messageCircleFill = "message.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case messageBadge = "message.badge"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case messageBadgeFilledFill = "message.badge.filled.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case messageBadgeCircle = "message.badge.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case messageBadgeCircleFill = "message.badge.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case messageBadgeFill = "message.badge.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case messageBadgeRtl = "message.badge.rtl"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case messageBadgeFilledFillRtl = "message.badge.filled.fill.rtl"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case messageBadgeCircleRtl = "message.badge.circle.rtl"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case messageBadgeCircleFillRtl = "message.badge.circle.fill.rtl"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case messageBadgeFillRtl = "message.badge.fill.rtl"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case messageAndWaveform = "message.and.waveform"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case messageAndWaveformFill = "message.and.waveform.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case checkmarkMessage = "checkmark.message"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case checkmarkMessageFill = "checkmark.message.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case arrowUpMessage = "arrow.up.message"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case arrowUpMessageFill = "arrow.up.message.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowDownMessage = "arrow.down.message"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowDownMessageFill = "arrow.down.message.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case plusMessage = "plus.message"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case plusMessageFill = "plus.message.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case ellipsisMessage = "ellipsis.message"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case ellipsisMessageFill = "ellipsis.message.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case bubbleRight = "bubble.right"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2552,7 +3346,11 @@ enum SFSymbol: String, Codable {
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case characterBubbleZh = "character.bubble.zh"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case characterBubbleZhTraditional = "character.bubble.zh.traditional"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case characterBubbleFillZh = "character.bubble.fill.zh"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case characterBubbleFillZhTraditional = "character.bubble.fill.zh.traditional"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case characterBubbleJa = "character.bubble.ja"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -2577,6 +3375,18 @@ enum SFSymbol: String, Codable {
     case captionsBubble = "captions.bubble"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case captionsBubbleFill = "captions.bubble.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case infoBubble = "info.bubble"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case infoBubbleFill = "info.bubble.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case questionmarkBubble = "questionmark.bubble"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case questionmarkBubbleFill = "questionmark.bubble.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case questionmarkBubbleAr = "questionmark.bubble.ar"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case questionmarkBubbleFillAr = "questionmark.bubble.fill.ar"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case plusBubble = "plus.bubble"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2605,6 +3415,14 @@ enum SFSymbol: String, Codable {
     case videoBubbleLeft = "video.bubble.left"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case videoBubbleLeftFill = "video.bubble.left.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case speakerWave2BubbleLeft = "speaker.wave.2.bubble.left"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case speakerWave2BubbleLeftFill = "speaker.wave.2.bubble.left.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case speakerWave2BubbleLeftRtl = "speaker.wave.2.bubble.left.rtl"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case speakerWave2BubbleLeftFillRtl = "speaker.wave.2.bubble.left.fill.rtl"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case bubbleMiddleBottom = "bubble.middle.bottom"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2633,26 +3451,34 @@ enum SFSymbol: String, Codable {
     case phoneBadgePlus = "phone.badge.plus"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case phoneFillBadgePlus = "phone.fill.badge.plus"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case phoneBadgeCheckmark = "phone.badge.checkmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case phoneFillBadgeCheckmark = "phone.fill.badge.checkmark"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case phoneConnection = "phone.connection"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case phoneFillConnection = "phone.fill.connection"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case phoneConnectionFill = "phone.connection.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case phoneAndWaveform = "phone.and.waveform"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case phoneAndWaveformFill = "phone.and.waveform.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case phoneArrowUpRight = "phone.arrow.up.right"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case phoneFillArrowUpRight = "phone.fill.arrow.up.right"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case phoneArrowUpRightFill = "phone.arrow.up.right.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case phoneArrowUpRightCircle = "phone.arrow.up.right.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case phoneArrowUpRightCircleFill = "phone.arrow.up.right.circle.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case phoneArrowDownLeft = "phone.arrow.down.left"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case phoneFillArrowDownLeft = "phone.fill.arrow.down.left"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case phoneArrowDownLeftFill = "phone.arrow.down.left.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case phoneArrowRight = "phone.arrow.right"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case phoneFillArrowRight = "phone.fill.arrow.right"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case phoneArrowRightFill = "phone.arrow.right.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case phoneDown = "phone.down"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2661,6 +3487,8 @@ enum SFSymbol: String, Codable {
     case phoneDownCircle = "phone.down.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case phoneDownCircleFill = "phone.down.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case phoneDownWavesLeftAndRight = "phone.down.waves.left.and.right"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case teletype = "teletype"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -2721,6 +3549,10 @@ enum SFSymbol: String, Codable {
     case questionmarkVideoAr = "questionmark.video.ar"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case questionmarkVideoFillAr = "questionmark.video.fill.ar"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case deskview = "deskview"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case deskviewFill = "deskview.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case envelope = "envelope"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2737,6 +3569,8 @@ enum SFSymbol: String, Codable {
     case envelopeOpen = "envelope.open"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case envelopeOpenFill = "envelope.open.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case envelopeOpenBadgeClock = "envelope.open.badge.clock"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case envelopeBadge = "envelope.badge"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2777,6 +3611,10 @@ enum SFSymbol: String, Codable {
     case gearBadgeXmark = "gear.badge.xmark"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case gearBadgeQuestionmark = "gear.badge.questionmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case gearBadge = "gear.badge"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case gearBadgeRtl = "gear.badge.rtl"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case gearshape = "gearshape"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -2799,6 +3637,8 @@ enum SFSymbol: String, Codable {
     case signatureTh = "signature.th"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case signatureZh = "signature.zh"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case signatureZhTraditional = "signature.zh.traditional"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case signatureJa = "signature.ja"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -2839,6 +3679,14 @@ enum SFSymbol: String, Codable {
     case bagBadgeMinus = "bag.badge.minus"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case bagFillBadgeMinus = "bag.fill.badge.minus"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case bagBadgeQuestionmark = "bag.badge.questionmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case bagFillBadgeQuestionmark = "bag.fill.badge.questionmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case bagBadgeQuestionmarkAr = "bag.badge.questionmark.ar"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case bagFillBadgeQuestionmarkAr = "bag.fill.badge.questionmark.ar"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cart = "cart"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2855,6 +3703,22 @@ enum SFSymbol: String, Codable {
     case cartBadgeMinus = "cart.badge.minus"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cartFillBadgeMinus = "cart.fill.badge.minus"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cartBadgeQuestionmark = "cart.badge.questionmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cartFillBadgeQuestionmark = "cart.fill.badge.questionmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cartBadgeQuestionmarkAr = "cart.badge.questionmark.ar"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cartFillBadgeQuestionmarkAr = "cart.fill.badge.questionmark.ar"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cartBadgeQuestionmarkRtl = "cart.badge.questionmark.rtl"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cartFillBadgeQuestionmarkRtl = "cart.fill.badge.questionmark.rtl"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case basket = "basket"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case basketFill = "basket.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case creditcard = "creditcard"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -2887,24 +3751,36 @@ enum SFSymbol: String, Codable {
     case crop = "crop"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cropRotate = "crop.rotate"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case dialMin = "dial.min"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case dialMinFill = "dial.min.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case dialMax = "dial.max"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case dialMaxFill = "dial.max.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dialLow = "dial.low"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dialLowFill = "dial.low.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dialMedium = "dial.medium"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dialMediumFill = "dial.medium.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dialHigh = "dial.high"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dialHighFill = "dial.high.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case gyroscope = "gyroscope"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case nosign = "nosign"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case gauge = "gauge"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case gaugeBadgePlus = "gauge.badge.plus"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case gaugeBadgeMinus = "gauge.badge.minus"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case nosignApp = "nosign.app"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case nosignAppFill = "nosign.app.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case gaugeMedium = "gauge.medium"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case gaugeMediumBadgePlus = "gauge.medium.badge.plus"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case gaugeMediumBadgeMinus = "gauge.medium.badge.minus"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case gaugeLow = "gauge.low"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case gaugeHigh = "gauge.high"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case speedometer = "speedometer"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -2959,24 +3835,16 @@ enum SFSymbol: String, Codable {
     case paintbrushPointed = "paintbrush.pointed"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case paintbrushPointedFill = "paintbrush.pointed.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case bandage = "bandage"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case bandageFill = "bandage.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case ruler = "ruler"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case rulerFill = "ruler.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case level = "level"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case levelFill = "level.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case linesMeasurementHorizontal = "lines.measurement.horizontal"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case wrench = "wrench"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case wrenchFill = "wrench.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case wrenchAdjustable = "wrench.adjustable"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case wrenchAdjustableFill = "wrench.adjustable.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case hammer = "hammer"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -3031,6 +3899,12 @@ enum SFSymbol: String, Codable {
     case scannerFill = "scanner.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case faxmachine = "faxmachine"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case faxmachineFill = "faxmachine.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case handbag = "handbag"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case handbagFill = "handbag.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case briefcase = "briefcase"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -3051,6 +3925,10 @@ enum SFSymbol: String, Codable {
     case crossCase = "cross.case"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case crossCaseFill = "cross.case.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case crossCaseCircle = "cross.case.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case crossCaseCircleFill = "cross.case.circle.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case suitcase = "suitcase"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3059,6 +3937,10 @@ enum SFSymbol: String, Codable {
     case suitcaseCart = "suitcase.cart"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case suitcaseCartFill = "suitcase.cart.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suitcaseRolling = "suitcase.rolling"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suitcaseRollingFill = "suitcase.rolling.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case theatermasks = "theatermasks"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3067,6 +3949,10 @@ enum SFSymbol: String, Codable {
     case theatermasksCircle = "theatermasks.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case theatermasksCircleFill = "theatermasks.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case theatermaskAndPaintbrush = "theatermask.and.paintbrush"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case theatermaskAndPaintbrushFill = "theatermask.and.paintbrush.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case puzzlepieceExtension = "puzzlepiece.extension"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3097,14 +3983,638 @@ enum SFSymbol: String, Codable {
     case buildingColumnsCircle = "building.columns.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case buildingColumnsCircleFill = "building.columns.circle.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case lightbulb = "lightbulb"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case lightbulbFill = "lightbulb.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case lightbulbCircle = "lightbulb.circle"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case lightbulbCircleFill = "lightbulb.circle.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case lightbulbSlash = "lightbulb.slash"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case lightbulbSlashFill = "lightbulb.slash.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightbulb2 = "lightbulb.2"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightbulb2Fill = "lightbulb.2.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightbulbLed = "lightbulb.led"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightbulbLedFill = "lightbulb.led.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightbulbLedWide = "lightbulb.led.wide"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightbulbLedWideFill = "lightbulb.led.wide.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fanOscillation = "fan.oscillation"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fanOscillationFill = "fan.oscillation.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case fanblades = "fanblades"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case fanbladesFill = "fanblades.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fanbladesSlash = "fanblades.slash"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fanbladesSlashFill = "fanblades.slash.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fanDesk = "fan.desk"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fanDeskFill = "fan.desk.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fanFloor = "fan.floor"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fanFloorFill = "fan.floor.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fanCeiling = "fan.ceiling"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fanCeilingFill = "fan.ceiling.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fanAndLightCeiling = "fan.and.light.ceiling"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fanAndLightCeilingFill = "fan.and.light.ceiling.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lampDesk = "lamp.desk"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lampDeskFill = "lamp.desk.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lampTable = "lamp.table"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lampTableFill = "lamp.table.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lampFloor = "lamp.floor"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lampFloorFill = "lamp.floor.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lampCeiling = "lamp.ceiling"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lampCeilingFill = "lamp.ceiling.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lampCeilingInverse = "lamp.ceiling.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightRecessed = "light.recessed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightRecessedFill = "light.recessed.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightRecessedInverse = "light.recessed.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightRecessed3 = "light.recessed.3"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightRecessed3Fill = "light.recessed.3.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightRecessed3Inverse = "light.recessed.3.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightPanel = "light.panel"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightPanelFill = "light.panel.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightCylindricalCeiling = "light.cylindrical.ceiling"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightCylindricalCeilingFill = "light.cylindrical.ceiling.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightCylindricalCeilingInverse = "light.cylindrical.ceiling.inverse"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightStrip2 = "light.strip.2"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightStrip2Fill = "light.strip.2.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightRibbon = "light.ribbon"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightRibbonFill = "light.ribbon.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chandelier = "chandelier"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chandelierFill = "chandelier.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightswitchOn = "lightswitch.on"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightswitchOnFill = "lightswitch.on.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightswitchOnSquare = "lightswitch.on.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightswitchOnSquareFill = "lightswitch.on.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightswitchOff = "lightswitch.off"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightswitchOffFill = "lightswitch.off.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightswitchOffSquare = "lightswitch.off.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightswitchOffSquareFill = "lightswitch.off.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case buttonProgrammable = "button.programmable"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case buttonProgrammableSquare = "button.programmable.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case buttonProgrammableSquareFill = "button.programmable.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case switchProgrammable = "switch.programmable"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case switchProgrammableFill = "switch.programmable.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case switchProgrammableSquare = "switch.programmable.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case switchProgrammableSquareFill = "switch.programmable.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeA = "poweroutlet.type.a"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeAFill = "poweroutlet.type.a.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeASquare = "poweroutlet.type.a.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeASquareFill = "poweroutlet.type.a.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeB = "poweroutlet.type.b"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeBFill = "poweroutlet.type.b.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeBSquare = "poweroutlet.type.b.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeBSquareFill = "poweroutlet.type.b.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeC = "poweroutlet.type.c"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeCFill = "poweroutlet.type.c.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeCSquare = "poweroutlet.type.c.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeCSquareFill = "poweroutlet.type.c.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeD = "poweroutlet.type.d"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeDFill = "poweroutlet.type.d.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeDSquare = "poweroutlet.type.d.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeDSquareFill = "poweroutlet.type.d.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeE = "poweroutlet.type.e"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeEFill = "poweroutlet.type.e.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeESquare = "poweroutlet.type.e.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeESquareFill = "poweroutlet.type.e.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeF = "poweroutlet.type.f"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeFFill = "poweroutlet.type.f.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeFSquare = "poweroutlet.type.f.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeFSquareFill = "poweroutlet.type.f.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeG = "poweroutlet.type.g"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeGFill = "poweroutlet.type.g.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeGSquare = "poweroutlet.type.g.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeGSquareFill = "poweroutlet.type.g.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeH = "poweroutlet.type.h"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeHFill = "poweroutlet.type.h.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeHSquare = "poweroutlet.type.h.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeHSquareFill = "poweroutlet.type.h.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeI = "poweroutlet.type.i"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeIFill = "poweroutlet.type.i.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeISquare = "poweroutlet.type.i.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeISquareFill = "poweroutlet.type.i.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeJ = "poweroutlet.type.j"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeJFill = "poweroutlet.type.j.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeJSquare = "poweroutlet.type.j.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeJSquareFill = "poweroutlet.type.j.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeK = "poweroutlet.type.k"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeKFill = "poweroutlet.type.k.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeKSquare = "poweroutlet.type.k.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeKSquareFill = "poweroutlet.type.k.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeL = "poweroutlet.type.l"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeLFill = "poweroutlet.type.l.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeLSquare = "poweroutlet.type.l.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeLSquareFill = "poweroutlet.type.l.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeM = "poweroutlet.type.m"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeMFill = "poweroutlet.type.m.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeMSquare = "poweroutlet.type.m.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeMSquareFill = "poweroutlet.type.m.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeN = "poweroutlet.type.n"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeNFill = "poweroutlet.type.n.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeNSquare = "poweroutlet.type.n.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeNSquareFill = "poweroutlet.type.n.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeO = "poweroutlet.type.o"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeOFill = "poweroutlet.type.o.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeOSquare = "poweroutlet.type.o.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletTypeOSquareFill = "poweroutlet.type.o.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletStrip = "poweroutlet.strip"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case poweroutletStripFill = "poweroutlet.strip.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightBeaconMin = "light.beacon.min"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightBeaconMinFill = "light.beacon.min.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightBeaconMax = "light.beacon.max"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lightBeaconMaxFill = "light.beacon.max.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case webCamera = "web.camera"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case webCameraFill = "web.camera.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case videoDoorbell = "video.doorbell"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case videoDoorbellFill = "video.doorbell.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case entryLeverKeypad = "entry.lever.keypad"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case entryLeverKeypadFill = "entry.lever.keypad.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case entryLeverKeypadTrianglebadgeExclamationmark = "entry.lever.keypad.trianglebadge.exclamationmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case entryLeverKeypadTrianglebadgeExclamationmarkFill = "entry.lever.keypad.trianglebadge.exclamationmark.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorLeftHandOpen = "door.left.hand.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorLeftHandClosed = "door.left.hand.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorRightHandOpen = "door.right.hand.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorRightHandClosed = "door.right.hand.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorSlidingLeftHandOpen = "door.sliding.left.hand.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorSlidingLeftHandClosed = "door.sliding.left.hand.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorSlidingRightHandOpen = "door.sliding.right.hand.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorSlidingRightHandClosed = "door.sliding.right.hand.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorGarageOpen = "door.garage.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorGarageClosed = "door.garage.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorGarageOpenTrianglebadgeExclamationmark = "door.garage.open.trianglebadge.exclamationmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorGarageClosedTrianglebadgeExclamationmark = "door.garage.closed.trianglebadge.exclamationmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorGarageDoubleBayOpen = "door.garage.double.bay.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorGarageDoubleBayClosed = "door.garage.double.bay.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorGarageDoubleBayOpenTrianglebadgeExclamationmark = "door.garage.double.bay.open.trianglebadge.exclamationmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorGarageDoubleBayClosedTrianglebadgeExclamationmark = "door.garage.double.bay.closed.trianglebadge.exclamationmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorFrenchOpen = "door.french.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case doorFrenchClosed = "door.french.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case pedestrianGateClosed = "pedestrian.gate.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case pedestrianGateOpen = "pedestrian.gate.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windowVerticalOpen = "window.vertical.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windowVerticalClosed = "window.vertical.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windowHorizontal = "window.horizontal"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windowHorizontalClosed = "window.horizontal.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windowCeiling = "window.ceiling"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windowCeilingClosed = "window.ceiling.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windowCasement = "window.casement"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windowCasementClosed = "window.casement.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windowAwning = "window.awning"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windowAwningClosed = "window.awning.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case blindsVerticalOpen = "blinds.vertical.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case blindsVerticalClosed = "blinds.vertical.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case blindsHorizontalOpen = "blinds.horizontal.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case blindsHorizontalClosed = "blinds.horizontal.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windowShadeOpen = "window.shade.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windowShadeClosed = "window.shade.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case rollerShadeOpen = "roller.shade.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case rollerShadeClosed = "roller.shade.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case romanShadeOpen = "roman.shade.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case romanShadeClosed = "roman.shade.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case curtainsOpen = "curtains.open"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case curtainsClosed = "curtains.closed"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case airPurifier = "air.purifier"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case airPurifierFill = "air.purifier.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dehumidifier = "dehumidifier"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dehumidifierFill = "dehumidifier.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case humidifier = "humidifier"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case humidifierFill = "humidifier.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case humidifierAndDroplets = "humidifier.and.droplets"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case humidifierAndDropletsFill = "humidifier.and.droplets.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case heaterVertical = "heater.vertical"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case heaterVerticalFill = "heater.vertical.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case airConditionerVertical = "air.conditioner.vertical"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case airConditionerVerticalFill = "air.conditioner.vertical.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case airConditionerHorizontal = "air.conditioner.horizontal"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case airConditionerHorizontalFill = "air.conditioner.horizontal.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sprinkler = "sprinkler"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sprinklerFill = "sprinkler.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sprinklerAndDroplets = "sprinkler.and.droplets"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sprinklerAndDropletsFill = "sprinkler.and.droplets.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case spigot = "spigot"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case spigotFill = "spigot.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dropKeypadRectangle = "drop.keypad.rectangle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dropKeypadRectangleFill = "drop.keypad.rectangle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case showerSidejet = "shower.sidejet"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case showerSidejetFill = "shower.sidejet.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case shower = "shower"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case showerFill = "shower.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case showerHandheld = "shower.handheld"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case showerHandheldFill = "shower.handheld.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case bathtub = "bathtub"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case bathtubFill = "bathtub.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case contactSensor = "contact.sensor"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case contactSensorFill = "contact.sensor.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sensor = "sensor"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sensorFill = "sensor.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case carbonMonoxideCloud = "carbon.monoxide.cloud"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case carbonMonoxideCloudFill = "carbon.monoxide.cloud.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case carbonDioxideCloud = "carbon.dioxide.cloud"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case carbonDioxideCloudFill = "carbon.dioxide.cloud.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case pipeAndDrop = "pipe.and.drop"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case pipeAndDropFill = "pipe.and.drop.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hifireceiver = "hifireceiver"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hifireceiverFill = "hifireceiver.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case videoprojector = "videoprojector"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case videoprojectorFill = "videoprojector.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case wifiRouter = "wifi.router"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case wifiRouterFill = "wifi.router.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case partyPopper = "party.popper"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case partyPopperFill = "party.popper.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case balloon = "balloon"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case balloonFill = "balloon.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case balloon2 = "balloon.2"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case balloon2Fill = "balloon.2.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fryingPan = "frying.pan"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fryingPanFill = "frying.pan.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case popcorn = "popcorn"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case popcornFill = "popcorn.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case popcornCircle = "popcorn.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case popcornCircleFill = "popcorn.circle.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case bedDouble = "bed.double"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case bedDoubleFill = "bed.double.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case bedDoubleCircle = "bed.double.circle"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case bedDoubleCircleFill = "bed.double.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sofa = "sofa"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sofaFill = "sofa.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chairLounge = "chair.lounge"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chairLoungeFill = "chair.lounge.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chair = "chair"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chairFill = "chair.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cabinet = "cabinet"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cabinetFill = "cabinet.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fireplace = "fireplace"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fireplaceFill = "fireplace.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tableFurniture = "table.furniture"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tableFurnitureFill = "table.furniture.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case washer = "washer"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case washerFill = "washer.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dryer = "dryer"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dryerFill = "dryer.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dishwasher = "dishwasher"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dishwasherFill = "dishwasher.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case oven = "oven"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case ovenFill = "oven.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case stove = "stove"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case stoveFill = "stove.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cooktop = "cooktop"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cooktopFill = "cooktop.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case microwave = "microwave"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case microwaveFill = "microwave.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case refrigerator = "refrigerator"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case refrigeratorFill = "refrigerator.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sink = "sink"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sinkFill = "sink.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case toilet = "toilet"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case toiletFill = "toilet.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case toiletCircle = "toilet.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case toiletCircleFill = "toilet.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case stairs = "stairs"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tent = "tent"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tentFill = "tent.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case tentCircle = "tent.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case tentCircleFill = "tent.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case tent2 = "tent.2"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case tent2Fill = "tent.2.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case tent2Circle = "tent.2.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case tent2CircleFill = "tent.2.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case houseLodge = "house.lodge"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case houseLodgeFill = "house.lodge.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case houseLodgeCircle = "house.lodge.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case houseLodgeCircleFill = "house.lodge.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case houseAndFlag = "house.and.flag"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case houseAndFlagFill = "house.and.flag.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case houseAndFlagCircle = "house.and.flag.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case houseAndFlagCircleFill = "house.and.flag.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case signpostLeft = "signpost.left"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case signpostLeftFill = "signpost.left.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case signpostLeftCircle = "signpost.left.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case signpostLeftCircleFill = "signpost.left.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case signpostRight = "signpost.right"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case signpostRightFill = "signpost.right.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case signpostRightCircle = "signpost.right.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case signpostRightCircleFill = "signpost.right.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case signpostRightAndLeft = "signpost.right.and.left"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case signpostRightAndLeftFill = "signpost.right.and.left.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case signpostRightAndLeftCircle = "signpost.right.and.left.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case signpostRightAndLeftCircleFill = "signpost.right.and.left.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case signpostAndArrowtriangleUp = "signpost.and.arrowtriangle.up"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case signpostAndArrowtriangleUpFill = "signpost.and.arrowtriangle.up.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case signpostAndArrowtriangleUpCircle = "signpost.and.arrowtriangle.up.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case signpostAndArrowtriangleUpCircleFill = "signpost.and.arrowtriangle.up.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case mountain2 = "mountain.2"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case mountain2Fill = "mountain.2.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case mountain2Circle = "mountain.2.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case mountain2CircleFill = "mountain.2.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case squareSplitBottomrightquarter = "square.split.bottomrightquarter"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -3157,18 +4667,40 @@ enum SFSymbol: String, Codable {
     case lockSlash = "lock.slash"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case lockSlashFill = "lock.slash.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lockTrianglebadgeExclamationmark = "lock.trianglebadge.exclamationmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lockTrianglebadgeExclamationmarkFill = "lock.trianglebadge.exclamationmark.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case exclamationmarkLock = "exclamationmark.lock"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case exclamationmarkLockFill = "exclamationmark.lock.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case lockOpen = "lock.open"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case lockOpenFill = "lock.open.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lockOpenTrianglebadgeExclamationmark = "lock.open.trianglebadge.exclamationmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lockOpenTrianglebadgeExclamationmarkFill = "lock.open.trianglebadge.exclamationmark.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case lockRotation = "lock.rotation"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case lockRotationOpen = "lock.rotation.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case lockOpenRotation = "lock.open.rotation"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case key = "key"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case keyFill = "key.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case keyRadiowavesForward = "key.radiowaves.forward"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case keyRadiowavesForwardFill = "key.radiowaves.forward.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case keyHorizontal = "key.horizontal"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case keyHorizontalFill = "key.horizontal.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case questionmarkKeyFilled = "questionmark.key.filled"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case wifi = "wifi"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3253,6 +4785,8 @@ enum SFSymbol: String, Codable {
     case powerplugFill = "powerplug.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case timelineSelection = "timeline.selection"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case faceid = "faceid"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case cpu = "cpu"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3263,8 +4797,28 @@ enum SFSymbol: String, Codable {
     case memorychipFill = "memorychip.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case opticaldisc = "opticaldisc"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case opticaldiscFill = "opticaldisc.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case sensorTagRadiowavesForward = "sensor.tag.radiowaves.forward"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case sensorTagRadiowavesForwardFill = "sensor.tag.radiowaves.forward.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case airtagRadiowavesForward = "airtag.radiowaves.forward"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case airtagRadiowavesForwardFill = "airtag.radiowaves.forward.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case airtagRadiowavesForwardRtl = "airtag.radiowaves.forward.rtl"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case airtagRadiowavesForwardFillRtl = "airtag.radiowaves.forward.fill.rtl"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case airtag = "airtag"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case airtagFill = "airtag.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case display = "display"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case playDisplay = "play.display"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case lockDisplay = "lock.display"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3277,6 +4831,8 @@ enum SFSymbol: String, Codable {
     case display2 = "display.2"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case desktopcomputer = "desktopcomputer"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case playDesktopcomputer = "play.desktopcomputer"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case lockDesktopcomputer = "lock.desktopcomputer"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3307,6 +4863,10 @@ enum SFSymbol: String, Codable {
     case xserve = "xserve"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case laptopcomputer = "laptopcomputer"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case laptopcomputerSlash = "laptopcomputer.slash"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case playLaptopcomputer = "play.laptopcomputer"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case lockLaptopcomputer = "lock.laptopcomputer"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3315,14 +4875,18 @@ enum SFSymbol: String, Codable {
     case laptopcomputerAndArrowDown = "laptopcomputer.and.arrow.down"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case laptopcomputerTrianglebadgeExclamationmark = "laptopcomputer.trianglebadge.exclamationmark"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case laptopcomputerAndIphone = "laptopcomputer.and.iphone"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case ipadAndIphone = "ipad.and.iphone"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case macbookAndIphone = "macbook.and.iphone"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case macbookAndIpad = "macbook.and.ipad"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case macmini = "macmini"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case macminiFill = "macmini.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case macstudio = "macstudio"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case macstudioFill = "macstudio.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case airportExpress = "airport.express"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -3349,28 +4913,72 @@ enum SFSymbol: String, Codable {
     case flipphone = "flipphone"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case candybarphone = "candybarphone"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case iphoneHomebutton = "iphone.homebutton"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case iphoneHomebuttonCircle = "iphone.homebutton.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case iphoneHomebuttonCircleFill = "iphone.homebutton.circle.fill"
-    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
-    case iphoneHomebuttonLandscape = "iphone.homebutton.landscape"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case iphoneHomebuttonRadiowavesLeftAndRight = "iphone.homebutton.radiowaves.left.and.right"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case iphoneHomebuttonRadiowavesLeftAndRightCircle = "iphone.homebutton.radiowaves.left.and.right.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case iphoneHomebuttonRadiowavesLeftAndRightCircleFill = "iphone.homebutton.radiowaves.left.and.right.circle.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case iphoneHomebuttonSlash = "iphone.homebutton.slash"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case iphoneHomebuttonSlashCircle = "iphone.homebutton.slash.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case iphoneHomebuttonSlashCircleFill = "iphone.homebutton.slash.circle.fill"
-    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
-    case iphoneHomebuttonBadgePlay = "iphone.homebutton.badge.play"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen1 = "iphone.gen1"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen1Circle = "iphone.gen1.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen1CircleFill = "iphone.gen1.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen1Landscape = "iphone.gen1.landscape"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen1RadiowavesLeftAndRight = "iphone.gen1.radiowaves.left.and.right"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen1RadiowavesLeftAndRightCircle = "iphone.gen1.radiowaves.left.and.right.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen1RadiowavesLeftAndRightCircleFill = "iphone.gen1.radiowaves.left.and.right.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen1Slash = "iphone.gen1.slash"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen1SlashCircle = "iphone.gen1.slash.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen1SlashCircleFill = "iphone.gen1.slash.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen1BadgePlay = "iphone.gen1.badge.play"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen2 = "iphone.gen2"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen2Circle = "iphone.gen2.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen2CircleFill = "iphone.gen2.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen2Landscape = "iphone.gen2.landscape"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen2RadiowavesLeftAndRight = "iphone.gen2.radiowaves.left.and.right"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen2RadiowavesLeftAndRightCircle = "iphone.gen2.radiowaves.left.and.right.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen2RadiowavesLeftAndRightCircleFill = "iphone.gen2.radiowaves.left.and.right.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen2Slash = "iphone.gen2.slash"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen2SlashCircle = "iphone.gen2.slash.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen2SlashCircleFill = "iphone.gen2.slash.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen2BadgePlay = "iphone.gen2.badge.play"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen3 = "iphone.gen3"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen3Circle = "iphone.gen3.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen3CircleFill = "iphone.gen3.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen3Landscape = "iphone.gen3.landscape"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen3RadiowavesLeftAndRight = "iphone.gen3.radiowaves.left.and.right"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen3RadiowavesLeftAndRightCircle = "iphone.gen3.radiowaves.left.and.right.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen3RadiowavesLeftAndRightCircleFill = "iphone.gen3.radiowaves.left.and.right.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen3Slash = "iphone.gen3.slash"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen3SlashCircle = "iphone.gen3.slash.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen3SlashCircleFill = "iphone.gen3.slash.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case iphoneGen3BadgePlay = "iphone.gen3.badge.play"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case iphone = "iphone"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3429,28 +5037,40 @@ enum SFSymbol: String, Codable {
     case iphoneSmartbatterycaseGen2 = "iphone.smartbatterycase.gen2"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case iphoneSmartbatterycaseGen1 = "iphone.smartbatterycase.gen1"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case ipadHomebutton = "ipad.homebutton"
-    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
-    case ipadHomebuttonBadgePlay = "ipad.homebutton.badge.play"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case ipadHomebuttonLandscape = "ipad.homebutton.landscape"
-    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
-    case ipadHomebuttonLandscapeBadgePlay = "ipad.homebutton.landscape.badge.play"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case ipadGen1 = "ipad.gen1"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case ipadGen1BadgePlay = "ipad.gen1.badge.play"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case ipadGen1Landscape = "ipad.gen1.landscape"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case ipadGen1LandscapeBadgePlay = "ipad.gen1.landscape.badge.play"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case ipadGen2 = "ipad.gen2"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case ipadGen2BadgePlay = "ipad.gen2.badge.play"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case ipadGen2Landscape = "ipad.gen2.landscape"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case ipadGen2LandscapeBadgePlay = "ipad.gen2.landscape.badge.play"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case ipad = "ipad"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case ipadBadgePlay = "ipad.badge.play"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case ipadLandscape = "ipad.landscape"
+    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
+    case ipadLandscapeBadgePlay = "ipad.landscape.badge.play"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case ipadAndIphone = "ipad.and.iphone"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case ipadAndIphoneSlash = "ipad.and.iphone.slash"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case lockIpad = "lock.ipad"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case lockOpenIpad = "lock.open.ipad"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case ipadAndArrowForward = "ipad.and.arrow.forward"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case ipadLandscape = "ipad.landscape"
-    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
-    case ipadLandscapeBadgePlay = "ipad.landscape.badge.play"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case ipadRearCamera = "ipad.rear.camera"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -3499,6 +5119,8 @@ enum SFSymbol: String, Codable {
     case platterTopApplewatchCase = "platter.top.applewatch.case"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case platterBottomApplewatchCase = "platter.bottom.applewatch.case"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowUpAndDownAndSparkles = "arrow.up.and.down.and.sparkles"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case digitalcrownArrowClockwise = "digitalcrown.arrow.clockwise"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3653,16 +5275,28 @@ enum SFSymbol: String, Codable {
     case appletvFill = "appletv.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case homepodAndAppletv = "homepod.and.appletv"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case homepodAndAppletvRtl = "homepod.and.appletv.rtl"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case homepodAndAppletvFill = "homepod.and.appletv.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case homepodAndAppletvFillRtl = "homepod.and.appletv.fill.rtl"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case homepodminiAndAppletv = "homepodmini.and.appletv"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case homepodminiAndAppletvRtl = "homepodmini.and.appletv.rtl"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case homepodminiAndAppletvFill = "homepodmini.and.appletv.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case homepodminiAndAppletvFillRtl = "homepodmini.and.appletv.fill.rtl"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case hifispeakerAndAppletv = "hifispeaker.and.appletv"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hifispeakerAndAppletvRtl = "hifispeaker.and.appletv.rtl"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case hifispeakerAndAppletvFill = "hifispeaker.and.appletv.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hifispeakerAndAppletvFillRtl = "hifispeaker.and.appletv.fill.rtl"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case appletvremoteGen1 = "appletvremote.gen1"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3679,6 +5313,10 @@ enum SFSymbol: String, Codable {
     case appletvremoteGen4 = "appletvremote.gen4"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case appletvremoteGen4Fill = "appletvremote.gen4.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case avRemote = "av.remote"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case avRemoteFill = "av.remote.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case magsafeBatterypack = "magsafe.batterypack"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3689,10 +5327,6 @@ enum SFSymbol: String, Codable {
     case cableConnector = "cable.connector"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case cableConnectorHorizontal = "cable.connector.horizontal"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case radio = "radio"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case radioFill = "radio.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case tv = "tv"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -3725,6 +5359,8 @@ enum SFSymbol: String, Codable {
     case tvAndHifispeakerFill = "tv.and.hifispeaker.fill"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case tvAndMediabox = "tv.and.mediabox"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tvAndMediaboxFill = "tv.and.mediabox.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case airplayvideo = "airplayvideo"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3741,6 +5377,14 @@ enum SFSymbol: String, Codable {
     case airplayaudioCircleFill = "airplayaudio.circle.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case airplayaudioBadgeExclamationmark = "airplayaudio.badge.exclamationmark"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case radio = "radio"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case radioFill = "radio.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case shazamLogo = "shazam.logo"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case shazamLogoFill = "shazam.logo.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case dotRadiowavesLeftAndRight = "dot.radiowaves.left.and.right"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -3776,11 +5420,11 @@ enum SFSymbol: String, Codable {
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case antennaRadiowavesLeftAndRight = "antenna.radiowaves.left.and.right"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case antennaRadiowavesLeftAndRightSlash = "antenna.radiowaves.left.and.right.slash"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case antennaRadiowavesLeftAndRightCircle = "antenna.radiowaves.left.and.right.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case antennaRadiowavesLeftAndRightCircleFill = "antenna.radiowaves.left.and.right.circle.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case antennaRadiowavesLeftAndRightSlash = "antenna.radiowaves.left.and.right.slash"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case pip = "pip"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -3825,6 +5469,22 @@ enum SFSymbol: String, Codable {
     case carCircle = "car.circle"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case carCircleFill = "car.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carFrontWavesUp = "car.front.waves.up"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carFrontWavesUpFill = "car.front.waves.up.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carRear = "car.rear"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carRearFill = "car.rear.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carRearWavesUp = "car.rear.waves.up"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carRearWavesUpFill = "car.rear.waves.up.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carRearAndTireMarks = "car.rear.and.tire.marks"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carRearAndTireMarksSlash = "car.rear.and.tire.marks.slash"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case boltCar = "bolt.car"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -3873,6 +5533,18 @@ enum SFSymbol: String, Codable {
     case trainSideMiddleCar = "train.side.middle.car"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case trainSideRearCar = "train.side.rear.car"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case boxTruck = "box.truck"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case boxTruckFill = "box.truck.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case boxTruckBadgeClock = "box.truck.badge.clock"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case boxTruckBadgeClockFill = "box.truck.badge.clock.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case boxTruckBadgeClockRtl = "box.truck.badge.clock.rtl"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case boxTruckBadgeClockFillRtl = "box.truck.badge.clock.fill.rtl"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case bicycle = "bicycle"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -3881,12 +5553,24 @@ enum SFSymbol: String, Codable {
     case bicycleCircleFill = "bicycle.circle.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case scooter = "scooter"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case stroller = "stroller"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case strollerFill = "stroller.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case parkingsign = "parkingsign"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case parkingsignCircle = "parkingsign.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case parkingsignCircleFill = "parkingsign.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sailboat = "sailboat"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sailboatFill = "sailboat.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case sailboatCircle = "sailboat.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case sailboatCircleFill = "sailboat.circle.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case fuelpump = "fuelpump"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3895,24 +5579,490 @@ enum SFSymbol: String, Codable {
     case fuelpumpCircle = "fuelpump.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case fuelpumpCircleFill = "fuelpump.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case engineCombustion = "engine.combustion"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case engineCombustionFill = "engine.combustion.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case headlightHighBeam = "headlight.high.beam"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case headlightHighBeamFill = "headlight.high.beam.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case autoHeadlightHighBeam = "auto.headlight.high.beam"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case autoHeadlightHighBeamFill = "auto.headlight.high.beam.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case headlightLowBeam = "headlight.low.beam"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case headlightLowBeamFill = "headlight.low.beam.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case autoHeadlightLowBeam = "auto.headlight.low.beam"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case autoHeadlightLowBeamFill = "auto.headlight.low.beam.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case headlightFog = "headlight.fog"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case headlightFogFill = "headlight.fog.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case taillightFog = "taillight.fog"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case taillightFogFill = "taillight.fog.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case headlightDaytime = "headlight.daytime"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case headlightDaytimeFill = "headlight.daytime.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case parkinglight = "parkinglight"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case parkinglightFill = "parkinglight.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case lightOverheadRight = "light.overhead.right"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case lightOverheadRightFill = "light.overhead.right.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case lightOverheadLeft = "light.overhead.left"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case lightOverheadLeftFill = "light.overhead.left.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case glowplug = "glowplug"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case infoWindshield = "info.windshield"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case heatElementWindshield = "heat.element.windshield"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windshieldFrontAndWiper = "windshield.front.and.wiper"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case windshieldFrontAndSpray = "windshield.front.and.spray"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case windshieldFrontAndWiperAndSpray = "windshield.front.and.wiper.and.spray"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case windshieldFrontAndFluidAndSpray = "windshield.front.and.fluid.and.spray"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case windshieldFrontAndWiperIntermittent = "windshield.front.and.wiper.intermittent"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windshieldFrontAndWiperAndDrop = "windshield.front.and.wiper.and.drop"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case windshieldFrontAndHeatWaves = "windshield.front.and.heat.waves"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case windshieldFrontAndWiperExclamationmark = "windshield.front.and.wiper.exclamationmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case windshieldRearAndWiper = "windshield.rear.and.wiper"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case windshieldRearAndSpray = "windshield.rear.and.spray"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case windshieldRearAndWiperAndSpray = "windshield.rear.and.wiper.and.spray"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case windshieldRearAndFluidAndSpray = "windshield.rear.and.fluid.and.spray"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case windshieldRearAndWiperIntermittent = "windshield.rear.and.wiper.intermittent"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case windshieldRearAndWiperAndDrop = "windshield.rear.and.wiper.and.drop"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case windshieldRearAndHeatWaves = "windshield.rear.and.heat.waves"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case windshieldRearAndWiperExclamationmark = "windshield.rear.and.wiper.exclamationmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case mirrorSideLeft = "mirror.side.left"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case mirrorSideRight = "mirror.side.right"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case mirrorSideLeftAndHeatWaves = "mirror.side.left.and.heat.waves"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case mirrorSideRightAndHeatWaves = "mirror.side.right.and.heat.waves"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case mirrorSideLeftAndArrowTurnDownRight = "mirror.side.left.and.arrow.turn.down.right"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case mirrorSideRightAndArrowTurnDownLeft = "mirror.side.right.and.arrow.turn.down.left"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case brakesignal = "brakesignal"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case exclamationmarkBrakesignal = "exclamationmark.brakesignal"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _1Brakesignal = "1.brakesignal"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _2Brakesignal = "2.brakesignal"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case autoBrakesignal = "auto.brakesignal"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case parkingsignBrakesignal = "parkingsign.brakesignal"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case parkingsignBrakesignalSlash = "parkingsign.brakesignal.slash"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case absBrakesignal = "abs.brakesignal"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case absBrakesignalSlash = "abs.brakesignal.slash"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case holdBrakesignal = "hold.brakesignal"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case thermometerBrakesignal = "thermometer.brakesignal"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case boltBrakesignal = "bolt.brakesignal"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case handRaisedBrakesignal = "hand.raised.brakesignal"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case handRaisedBrakesignalSlash = "hand.raised.brakesignal.slash"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case retarderBrakesignal = "retarder.brakesignal"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fluidBrakesignal = "fluid.brakesignal"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case brakesignalDashed = "brakesignal.dashed"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case transmission = "transmission"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case exclamationmarkTransmission = "exclamationmark.transmission"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case thermometerTransmission = "thermometer.transmission"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case fluidTransmission = "fluid.transmission"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case oilcan = "oilcan"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case oilcanFill = "oilcan.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureSeatedSeatbelt = "figure.seated.seatbelt"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureSeatedSeatbeltAndAirbagOn = "figure.seated.seatbelt.and.airbag.on"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureSeatedSeatbeltAndAirbagOff = "figure.seated.seatbelt.and.airbag.off"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureSeatedSideAirbagOn = "figure.seated.side.airbag.on"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureSeatedSideAirbagOff = "figure.seated.side.airbag.off"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureSeatedSideAirbagOn2 = "figure.seated.side.airbag.on.2"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureSeatedSideAirbagOff2 = "figure.seated.side.airbag.off.2"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureSeatedSideAirUpper = "figure.seated.side.air.upper"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureSeatedSideAirLower = "figure.seated.side.air.lower"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureSeatedSideAirWindshield = "figure.seated.side.air.windshield"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureSeatedSideAirUpperAndLower = "figure.seated.side.air.upper.and.lower"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case figureSeatedSideWindshieldFrontAndHeatWaves = "figure.seated.side.windshield.front.and.heat.waves"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case hazardsign = "hazardsign"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case hazardsignFill = "hazardsign.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case wrongwaysign = "wrongwaysign"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case wrongwaysignFill = "wrongwaysign.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case thermometerAndLiquidWaves = "thermometer.and.liquid.waves"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case steeringwheel = "steeringwheel"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case steeringwheelSlash = "steeringwheel.slash"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case steeringwheelAndHeatWaves = "steeringwheel.and.heat.waves"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case steeringwheelExclamationmark = "steeringwheel.exclamationmark"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case steeringwheelAndKey = "steeringwheel.and.key"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case steeringwheelAndLock = "steeringwheel.and.lock"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSide = "car.side"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideFill = "car.side.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideFrontOpen = "car.side.front.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideFrontOpenFill = "car.side.front.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideRearOpen = "car.side.rear.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideRearOpenFill = "car.side.rear.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideAirCirculate = "car.side.air.circulate"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideAirCirculateFill = "car.side.air.circulate.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideAirFresh = "car.side.air.fresh"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideAirFreshFill = "car.side.air.fresh.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideAndExclamationmark = "car.side.and.exclamationmark"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideAndExclamationmarkFill = "car.side.and.exclamationmark.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideArrowtriangleUpArrowtriangleDown = "car.side.arrowtriangle.up.arrowtriangle.down"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideArrowtriangleUpArrowtriangleDownFill = "car.side.arrowtriangle.up.arrowtriangle.down.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideArrowtriangleUp = "car.side.arrowtriangle.up"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideArrowtriangleUpFill = "car.side.arrowtriangle.up.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideArrowtriangleDown = "car.side.arrowtriangle.down"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carSideArrowtriangleDownFill = "car.side.arrowtriangle.down.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSide = "suv.side"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideFill = "suv.side.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideFrontOpen = "suv.side.front.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideFrontOpenFill = "suv.side.front.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideRearOpen = "suv.side.rear.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideRearOpenFill = "suv.side.rear.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideAirCirculate = "suv.side.air.circulate"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideAirCirculateFill = "suv.side.air.circulate.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideAirFresh = "suv.side.air.fresh"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideAirFreshFill = "suv.side.air.fresh.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideAndExclamationmark = "suv.side.and.exclamationmark"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideAndExclamationmarkFill = "suv.side.and.exclamationmark.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideArrowtriangleUpArrowtriangleDown = "suv.side.arrowtriangle.up.arrowtriangle.down"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideArrowtriangleUpArrowtriangleDownFill = "suv.side.arrowtriangle.up.arrowtriangle.down.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideArrowtriangleUp = "suv.side.arrowtriangle.up"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideArrowtriangleUpFill = "suv.side.arrowtriangle.up.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideArrowtriangleDown = "suv.side.arrowtriangle.down"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case suvSideArrowtriangleDownFill = "suv.side.arrowtriangle.down.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftOpen = "car.top.door.front.left.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftOpenFill = "car.top.door.front.left.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontRightOpen = "car.top.door.front.right.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontRightOpenFill = "car.top.door.front.right.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorRearLeftOpen = "car.top.door.rear.left.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorRearLeftOpenFill = "car.top.door.rear.left.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorRearRightOpen = "car.top.door.rear.right.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorRearRightOpenFill = "car.top.door.rear.right.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndFrontRightOpen = "car.top.door.front.left.and.front.right.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndFrontRightOpenFill = "car.top.door.front.left.and.front.right.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorRearLeftAndRearRightOpen = "car.top.door.rear.left.and.rear.right.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorRearLeftAndRearRightOpenFill = "car.top.door.rear.left.and.rear.right.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndRearLeftOpen = "car.top.door.front.left.and.rear.left.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndRearLeftOpenFill = "car.top.door.front.left.and.rear.left.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontRightAndRearRightOpen = "car.top.door.front.right.and.rear.right.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontRightAndRearRightOpenFill = "car.top.door.front.right.and.rear.right.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndRearRightOpen = "car.top.door.front.left.and.rear.right.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndRearRightOpenFill = "car.top.door.front.left.and.rear.right.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontRightAndRearLeftOpen = "car.top.door.front.right.and.rear.left.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontRightAndRearLeftOpenFill = "car.top.door.front.right.and.rear.left.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndFrontRightAndRearLeftOpen = "car.top.door.front.left.and.front.right.and.rear.left.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndFrontRightAndRearLeftOpenFill = "car.top.door.front.left.and.front.right.and.rear.left.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndFrontRightAndRearRightOpen = "car.top.door.front.left.and.front.right.and.rear.right.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndFrontRightAndRearRightOpenFill = "car.top.door.front.left.and.front.right.and.rear.right.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndRearLeftAndRearRightOpen = "car.top.door.front.left.and.rear.left.and.rear.right.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndRearLeftAndRearRightOpenFill = "car.top.door.front.left.and.rear.left.and.rear.right.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontRightAndRearLeftAndRearRightOpen = "car.top.door.front.right.and.rear.left.and.rear.right.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontRightAndRearLeftAndRearRightOpenFill = "car.top.door.front.right.and.rear.left.and.rear.right.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndFrontRightAndRearLeftAndRearRightOpen = "car.top.door.front.left.and.front.right.and.rear.left.and.rear.right.open"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopDoorFrontLeftAndFrontRightAndRearLeftAndRearRightOpenFill = "car.top.door.front.left.and.front.right.and.rear.left.and.rear.right.open.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopRadiowavesRearRight = "car.top.radiowaves.rear.right"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopRadiowavesRearRightFill = "car.top.radiowaves.rear.right.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopRadiowavesRearLeft = "car.top.radiowaves.rear.left"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopRadiowavesRearLeftFill = "car.top.radiowaves.rear.left.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopRadiowavesFront = "car.top.radiowaves.front"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopRadiowavesFrontFill = "car.top.radiowaves.front.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopRadiowavesRear = "car.top.radiowaves.rear"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopRadiowavesRearFill = "car.top.radiowaves.rear.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopRadiowavesRearLeftAndRearRight = "car.top.radiowaves.rear.left.and.rear.right"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopRadiowavesRearLeftAndRearRightFill = "car.top.radiowaves.rear.left.and.rear.right.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopLaneDashedDepartureLeft = "car.top.lane.dashed.departure.left"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopLaneDashedDepartureLeftFill = "car.top.lane.dashed.departure.left.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopLaneDashedDepartureRight = "car.top.lane.dashed.departure.right"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopLaneDashedDepartureRightFill = "car.top.lane.dashed.departure.right.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopLaneDashedArrowtriangleInward = "car.top.lane.dashed.arrowtriangle.inward"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopLaneDashedArrowtriangleInwardFill = "car.top.lane.dashed.arrowtriangle.inward.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopLaneDashedBadgeSteeringwheel = "car.top.lane.dashed.badge.steeringwheel"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carTopLaneDashedBadgeSteeringwheelFill = "car.top.lane.dashed.badge.steeringwheel.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case axel2 = "axel.2"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case axel2FrontEngaged = "axel.2.front.engaged"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case axel2RearEngaged = "axel.2.rear.engaged"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case axel2FrontAndRearEngaged = "axel.2.front.and.rear.engaged"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case autostartstop = "autostartstop"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case autostartstopSlash = "autostartstop.slash"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case autostartstopTrianglebadgeExclamationmark = "autostartstop.trianglebadge.exclamationmark"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case batteryblock = "batteryblock"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case batteryblockFill = "batteryblock.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case batteryblockSlash = "batteryblock.slash"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case batteryblockSlashFill = "batteryblock.slash.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case minusPlusBatteryblock = "minus.plus.batteryblock"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case minusPlusBatteryblockFill = "minus.plus.batteryblock.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case minusPlusBatteryblockSlash = "minus.plus.batteryblock.slash"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case minusPlusBatteryblockSlashFill = "minus.plus.batteryblock.slash.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case minusPlusAndFluidBatteryblock = "minus.plus.and.fluid.batteryblock"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case minusPlusBatteryblockExclamationmark = "minus.plus.batteryblock.exclamationmark"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case minusPlusBatteryblockExclamationmarkFill = "minus.plus.batteryblock.exclamationmark.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case minusPlusBatteryblockStack = "minus.plus.batteryblock.stack"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case minusPlusBatteryblockStackFill = "minus.plus.batteryblock.stack.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case minusPlusBatteryblockStackExclamationmark = "minus.plus.batteryblock.stack.exclamationmark"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case minusPlusBatteryblockStackExclamationmarkFill = "minus.plus.batteryblock.stack.exclamationmark.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case fanblades = "fanblades"
+    case boltBatteryblock = "bolt.batteryblock"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case fanbladesFill = "fanblades.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case bedDouble = "bed.double"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case bedDoubleFill = "bed.double.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case bedDoubleCircle = "bed.double.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case bedDoubleCircleFill = "bed.double.circle.fill"
+    case boltBatteryblockFill = "bolt.batteryblock.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case roadLanes = "road.lanes"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case roadLanesCurvedLeft = "road.lanes.curved.left"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case roadLanesCurvedRight = "road.lanes.curved.right"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case roadLaneArrowtriangle2Inward = "road.lane.arrowtriangle.2.inward"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carRearRoadLane = "car.rear.road.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case carRearRoadLaneDashed = "car.rear.road.lane.dashed"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case snowflakeRoadLane = "snowflake.road.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case snowflakeRoadLaneDashed = "snowflake.road.lane.dashed"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case steeringwheelRoadLane = "steeringwheel.road.lane"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case steeringwheelRoadLaneDashed = "steeringwheel.road.lane.dashed"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case abs = "abs"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case absCircle = "abs.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case absCircleFill = "abs.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case mph = "mph"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case mphCircle = "mph.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case mphCircleFill = "mph.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case kph = "kph"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case kphCircle = "kph.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case kphCircleFill = "kph.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case lungs = "lungs"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case lungsFill = "lungs.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case allergens = "allergens"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case allergensFill = "allergens.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case microbe = "microbe"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case microbeFill = "microbe.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case microbeCircle = "microbe.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case microbeCircleFill = "microbe.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case bubblesAndSparkles = "bubbles.and.sparkles"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case bubblesAndSparklesFill = "bubbles.and.sparkles.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case medicalThermometer = "medical.thermometer"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case medicalThermometerFill = "medical.thermometer.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case bandage = "bandage"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case bandageFill = "bandage.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case syringe = "syringe"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case syringeFill = "syringe.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case facemask = "facemask"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case facemaskFill = "facemask.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case pill = "pill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case pillFill = "pill.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case pillCircle = "pill.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case pillCircleFill = "pill.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case pills = "pills"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -3921,6 +6071,14 @@ enum SFSymbol: String, Codable {
     case pillsCircle = "pills.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case pillsCircleFill = "pills.circle.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case cross = "cross"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case crossFill = "cross.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case crossCircle = "cross.circle"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case crossCircleFill = "cross.circle.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case testtube2 = "testtube.2"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -3931,14 +6089,22 @@ enum SFSymbol: String, Codable {
     case crossVial = "cross.vial"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case crossVialFill = "cross.vial.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case staroflife = "staroflife"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case staroflifeFill = "staroflife.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case cross = "cross"
+    case staroflifeCircle = "staroflife.circle"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case crossFill = "cross.fill"
+    case staroflifeCircleFill = "staroflife.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case crossCircle = "cross.circle"
+    case heartTextSquare = "heart.text.square"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case crossCircleFill = "cross.circle.fill"
+    case heartTextSquareFill = "heart.text.square.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case squareTextSquare = "square.text.square"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case squareTextSquareFill = "square.text.square.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case hare = "hare"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -3947,14 +6113,14 @@ enum SFSymbol: String, Codable {
     case tortoise = "tortoise"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case tortoiseFill = "tortoise.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case pawprint = "pawprint"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case pawprintFill = "pawprint.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case pawprintCircle = "pawprint.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case pawprintCircleFill = "pawprint.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lizard = "lizard"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lizardFill = "lizard.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case bird = "bird"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case birdFill = "bird.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case ant = "ant"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -3967,6 +6133,26 @@ enum SFSymbol: String, Codable {
     case ladybug = "ladybug"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case ladybugFill = "ladybug.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fish = "fish"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fishFill = "fish.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case fishCircle = "fish.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case fishCircleFill = "fish.circle.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case pawprint = "pawprint"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case pawprintFill = "pawprint.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case pawprintCircle = "pawprint.circle"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case pawprintCircleFill = "pawprint.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case teddybear = "teddybear"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case teddybearFill = "teddybear.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case leaf = "leaf"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -3977,12 +6163,30 @@ enum SFSymbol: String, Codable {
     case leafCircleFill = "leaf.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case leafArrowTriangleCirclepath = "leaf.arrow.triangle.circlepath"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case laurelLeading = "laurel.leading"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case laurelTrailing = "laurel.trailing"
     @available(watchOS 8.5, iOS 15.4, macOS 12.3, tvOS 15.4, *)
     case cameraMacro = "camera.macro"
     @available(watchOS 8.5, iOS 15.4, macOS 12.3, tvOS 15.4, *)
     case cameraMacroCircle = "camera.macro.circle"
     @available(watchOS 8.5, iOS 15.4, macOS 12.3, tvOS 15.4, *)
     case cameraMacroCircleFill = "camera.macro.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case tree = "tree"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case treeFill = "tree.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case treeCircle = "tree.circle"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case treeCircleFill = "tree.circle.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case tshirt = "tshirt"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case tshirtFill = "tshirt.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case shoeprintsFill = "shoeprints.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case film = "film"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -3991,26 +6195,188 @@ enum SFSymbol: String, Codable {
     case filmCircle = "film.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case filmCircleFill = "film.circle.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case sportscourt = "sportscourt"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case sportscourtFill = "sportscourt.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case filmStack = "film.stack"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case filmStackFill = "film.stack.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case ticket = "ticket"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case ticketFill = "ticket.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case faceSmiling = "face.smiling"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case faceSmilingFill = "face.smiling.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case faceSmilingInverse = "face.smiling.inverse"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case faceDashed = "face.dashed"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case faceDashedFill = "face.dashed.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case eye = "eye"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case eyeFill = "eye.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case crown = "crown"
+    case eyeCircle = "eye.circle"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case crownFill = "crown.fill"
+    case eyeCircleFill = "eye.circle.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case eyeSquare = "eye.square"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case eyeSquareFill = "eye.square.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case eyeSlash = "eye.slash"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case eyeSlashFill = "eye.slash.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case eyeSlashCircle = "eye.slash.circle"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case eyeSlashCircleFill = "eye.slash.circle.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case eyeTrianglebadgeExclamationmark = "eye.trianglebadge.exclamationmark"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case eyeTrianglebadgeExclamationmarkFill = "eye.trianglebadge.exclamationmark.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case eyes = "eyes"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case eyesInverse = "eyes.inverse"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case eyebrow = "eyebrow"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case nose = "nose"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case noseFill = "nose.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case comb = "comb"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case combFill = "comb.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case mustache = "mustache"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case mustacheFill = "mustache.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case mouth = "mouth"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case mouthFill = "mouth.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case eyeglasses = "eyeglasses"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case brainHeadProfile = "brain.head.profile"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case brain = "brain"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case ear = "ear"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case earBadgeCheckmark = "ear.badge.checkmark"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case earTrianglebadgeExclamationmark = "ear.trianglebadge.exclamationmark"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case earAndWaveform = "ear.and.waveform"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case earFill = "ear.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case hearingdeviceEar = "hearingdevice.ear"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hearingdeviceEarFill = "hearingdevice.ear.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hearingdeviceAndSignalMeter = "hearingdevice.and.signal.meter"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hearingdeviceAndSignalMeterFill = "hearingdevice.and.signal.meter.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handRaised = "hand.raised"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handRaisedFill = "hand.raised.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case handRaisedCircle = "hand.raised.circle"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case handRaisedCircleFill = "hand.raised.circle.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case handRaisedSquare = "hand.raised.square"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case handRaisedSquareFill = "hand.raised.square.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case handRaisedApp = "hand.raised.app"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case handRaisedAppFill = "hand.raised.app.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handRaisedSlash = "hand.raised.slash"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handRaisedSlashFill = "hand.raised.slash.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case handRaisedFingersSpread = "hand.raised.fingers.spread"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case handRaisedFingersSpreadFill = "hand.raised.fingers.spread.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handThumbsup = "hand.thumbsup"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handThumbsupFill = "hand.thumbsup.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case handThumbsupCircle = "hand.thumbsup.circle"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case handThumbsupCircleFill = "hand.thumbsup.circle.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handThumbsdown = "hand.thumbsdown"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handThumbsdownFill = "hand.thumbsdown.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case handThumbsdownCircle = "hand.thumbsdown.circle"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case handThumbsdownCircleFill = "hand.thumbsdown.circle.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handPointUpLeft = "hand.point.up.left"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handPointUpLeftFill = "hand.point.up.left.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handDraw = "hand.draw"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handDrawFill = "hand.draw.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handTap = "hand.tap"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handTapFill = "hand.tap.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case rectangleAndHandPointUpLeft = "rectangle.and.hand.point.up.left"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case rectangleAndHandPointUpLeftFill = "rectangle.and.hand.point.up.left.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case rectangleFilledAndHandPointUpLeft = "rectangle.filled.and.hand.point.up.left"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case rectangleAndHandPointUpLeftFilled = "rectangle.and.hand.point.up.left.filled"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handPointLeft = "hand.point.left"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handPointLeftFill = "hand.point.left.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handPointRight = "hand.point.right"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case handPointRightFill = "hand.point.right.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handPointUp = "hand.point.up"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handPointUpFill = "hand.point.up.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handPointUpBraille = "hand.point.up.braille"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handPointUpBrailleFill = "hand.point.up.braille.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handPointDown = "hand.point.down"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handPointDownFill = "hand.point.down.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handWave = "hand.wave"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handWaveFill = "hand.wave.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handsClap = "hands.clap"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handsClapFill = "hands.clap.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handsSparkles = "hands.sparkles"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case handsSparklesFill = "hands.sparkles.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case crown = "crown"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case crownFill = "crown.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case qrcode = "qrcode"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -4029,8 +6395,6 @@ enum SFSymbol: String, Codable {
     case plusViewfinder = "plus.viewfinder"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cameraViewfinder = "camera.viewfinder"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case faceid = "faceid"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case docViewfinder = "doc.viewfinder"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -4041,6 +6405,8 @@ enum SFSymbol: String, Codable {
     case locationFillViewfinder = "location.fill.viewfinder"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case personFillViewfinder = "person.fill.viewfinder"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case ellipsisViewfinder = "ellipsis.viewfinder"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case textViewfinder = "text.viewfinder"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -4049,6 +6415,10 @@ enum SFSymbol: String, Codable {
     case dotCircleViewfinder = "dot.circle.viewfinder"
     @available(watchOS 8.5, iOS 15.4, macOS 12.3, tvOS 15.4, *)
     case keyViewfinder = "key.viewfinder"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case creditcardViewfinder = "creditcard.viewfinder"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case vialViewfinder = "vial.viewfinder"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case photo = "photo"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -4065,8 +6435,6 @@ enum SFSymbol: String, Codable {
     case textBelowPhotoRtl = "text.below.photo.rtl"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case textBelowPhotoFillRtl = "text.below.photo.fill.rtl"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case checkerboardRectangle = "checkerboard.rectangle"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case cameraMeteringCenterWeightedAverage = "camera.metering.center.weighted.average"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -4087,6 +6455,14 @@ enum SFSymbol: String, Codable {
     case cameraMeteringUnknownAr = "camera.metering.unknown.ar"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case cameraAperture = "camera.aperture"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case circleFilledPatternDiagonallineRectangle = "circle.filled.pattern.diagonalline.rectangle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case circleRectangleFilledPatternDiagonalline = "circle.rectangle.filled.pattern.diagonalline"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case circleDashedRectangle = "circle.dashed.rectangle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case circleRectangleDashed = "circle.rectangle.dashed"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case rectangleDashed = "rectangle.dashed"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -4125,6 +6501,14 @@ enum SFSymbol: String, Codable {
     case rectangleStack = "rectangle.stack"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case rectangleStackFill = "rectangle.stack.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case photoStack = "photo.stack"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case photoStackFill = "photo.stack.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case sparklesRectangleStack = "sparkles.rectangle.stack"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case sparklesRectangleStackFill = "sparkles.rectangle.stack.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case rectangleStackBadgePlus = "rectangle.stack.badge.plus"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -4141,10 +6525,6 @@ enum SFSymbol: String, Codable {
     case rectangleStackBadgePlay = "rectangle.stack.badge.play"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case rectangleStackBadgePlayFill = "rectangle.stack.badge.play.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case sparklesRectangleStack = "sparkles.rectangle.stack"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case sparklesRectangleStackFill = "sparkles.rectangle.stack.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sidebarLeft = "sidebar.left"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -4161,6 +6541,10 @@ enum SFSymbol: String, Codable {
     case sidebarSquaresLeading = "sidebar.squares.leading"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case sidebarSquaresTrailing = "sidebar.squares.trailing"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case squaresBelowRectangle = "squares.below.rectangle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squaresLeadingRectangle = "squares.leading.rectangle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case macwindow = "macwindow"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -4197,10 +6581,6 @@ enum SFSymbol: String, Codable {
     case mosaic = "mosaic"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case mosaicFill = "mosaic.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case squaresBelowRectangle = "squares.below.rectangle"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case rectangleSplit3X3Fill = "rectangle.split.3x3.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case squareOnSquareSquareshapeControlhandles = "square.on.square.squareshape.controlhandles"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -4209,14 +6589,6 @@ enum SFSymbol: String, Codable {
     case pano = "pano"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case panoFill = "pano.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleGrid2X1 = "circle.grid.2x1"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleGrid2X1Fill = "circle.grid.2x1.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleGrid2X1LeftFilled = "circle.grid.2x1.left.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case circleGrid2X1RightFilled = "circle.grid.2x1.right.filled"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case squareAndLineVerticalAndSquare = "square.and.line.vertical.and.square"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -4225,12 +6597,12 @@ enum SFSymbol: String, Codable {
     case squareFilledAndLineVerticalAndSquare = "square.filled.and.line.vertical.and.square"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case squareAndLineVerticalAndSquareFilled = "square.and.line.vertical.and.square.filled"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case rectangleConnectedToLineBelow = "rectangle.connected.to.line.below"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case flowchart = "flowchart"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case flowchartFill = "flowchart.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case rectangleConnectedToLineBelow = "rectangle.connected.to.line.below"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case alignHorizontalLeft = "align.horizontal.left"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -4255,22 +6627,30 @@ enum SFSymbol: String, Codable {
     case alignVerticalBottom = "align.vertical.bottom"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case alignVerticalBottomFill = "align.vertical.bottom.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case shield = "shield"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case shieldFill = "shield.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case shieldLefthalfFilled = "shield.lefthalf.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case shieldRighthalfFilled = "shield.righthalf.filled"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case shieldSlash = "shield.slash"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case shieldSlashFill = "shield.slash.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case shieldLefthalfFilledSlash = "shield.lefthalf.filled.slash"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case checkerboardShield = "checkerboard.shield"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case distributeVerticalTop = "distribute.vertical.top"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case distributeVerticalTopFill = "distribute.vertical.top.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case distributeVerticalCenter = "distribute.vertical.center"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case distributeVerticalCenterFill = "distribute.vertical.center.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case distributeVerticalBottom = "distribute.vertical.bottom"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case distributeVerticalBottomFill = "distribute.vertical.bottom.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case distributeHorizontalLeft = "distribute.horizontal.left"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case distributeHorizontalLeftFill = "distribute.horizontal.left.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case distributeHorizontalCenter = "distribute.horizontal.center"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case distributeHorizontalCenterFill = "distribute.horizontal.center.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case distributeHorizontalRight = "distribute.horizontal.right"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case distributeHorizontalRightFill = "distribute.horizontal.right.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case switch2 = "switch.2"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -4283,12 +6663,22 @@ enum SFSymbol: String, Codable {
     case pointFilledTopleftDownCurvedtoPointBottomrightUp = "point.filled.topleft.down.curvedto.point.bottomright.up"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case appConnectedToAppBelowFill = "app.connected.to.app.below.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case lineweight = "lineweight"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sliderHorizontal3 = "slider.horizontal.3"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sliderHorizontal2SquareOnSquare = "slider.horizontal.2.square.on.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sliderHorizontal2SquareBadgeArrowDown = "slider.horizontal.2.square.badge.arrow.down"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sliderHorizontal2Gobackward = "slider.horizontal.2.gobackward"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sliderHorizontalBelowRectangle = "slider.horizontal.below.rectangle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case sliderHorizontalBelowSquareFilledAndSquare = "slider.horizontal.below.square.filled.and.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sliderHorizontalBelowSquareAndSquareFilled = "slider.horizontal.below.square.and.square.filled"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case sliderVertical3 = "slider.vertical.3"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -4307,6 +6697,10 @@ enum SFSymbol: String, Codable {
     case shippingboxCircle = "shippingbox.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case shippingboxCircleFill = "shippingbox.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case shippingboxAndArrowBackward = "shippingbox.and.arrow.backward"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case shippingboxAndArrowBackwardFill = "shippingbox.and.arrow.backward.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case arkit = "arkit"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -4363,10 +6757,26 @@ enum SFSymbol: String, Codable {
     case clockCircle = "clock.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case clockCircleFill = "clock.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case clockBadge = "clock.badge"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case clockBadgeFill = "clock.badge.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case clockBadgeCheckmark = "clock.badge.checkmark"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case clockBadgeCheckmarkFill = "clock.badge.checkmark.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case clockBadgeXmark = "clock.badge.xmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case clockBadgeXmarkFill = "clock.badge.xmark.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case clockBadgeQuestionmark = "clock.badge.questionmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case clockBadgeQuestionmarkFill = "clock.badge.questionmark.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case clockBadgeQuestionmarkAr = "clock.badge.questionmark.ar"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case clockBadgeQuestionmarkFillAr = "clock.badge.questionmark.fill.ar"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case clockBadgeExclamationmark = "clock.badge.exclamationmark"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -4379,6 +6789,10 @@ enum SFSymbol: String, Codable {
     case alarm = "alarm"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case alarmFill = "alarm.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case alarmWavesLeftAndRight = "alarm.waves.left.and.right"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case alarmWavesLeftAndRightFill = "alarm.waves.left.and.right.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case stopwatch = "stopwatch"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -4387,6 +6801,10 @@ enum SFSymbol: String, Codable {
     case chartXyaxisLine = "chart.xyaxis.line"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case timer = "timer"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case timerCircle = "timer.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case timerCircleFill = "timer.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case timerSquare = "timer.square"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -4447,6 +6865,18 @@ enum SFSymbol: String, Codable {
     case rJoystickTiltDown = "r.joystick.tilt.down"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case rJoystickTiltDownFill = "r.joystick.tilt.down.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case circleGridCross = "circle.grid.cross"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case circleGridCrossFill = "circle.grid.cross.fill"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case circleGridCrossLeftFilled = "circle.grid.cross.left.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case circleGridCrossUpFilled = "circle.grid.cross.up.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case circleGridCrossRightFilled = "circle.grid.cross.right.filled"
+    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
+    case circleGridCrossDownFilled = "circle.grid.cross.down.filled"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case dpad = "dpad"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -4527,146 +6957,48 @@ enum SFSymbol: String, Codable {
     case zrRectangleRoundedtop = "zr.rectangle.roundedtop"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case zrRectangleRoundedtopFill = "zr.rectangle.roundedtop.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case logoPlaystation = "logo.playstation"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case logoXbox = "logo.xbox"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case playstationLogo = "playstation.logo"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case xboxLogo = "xbox.logo"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case paintpalette = "paintpalette"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case paintpaletteFill = "paintpalette.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case swatchpalette = "swatchpalette"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case swatchpaletteFill = "swatchpalette.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case cupAndSaucer = "cup.and.saucer"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case cupAndSaucerFill = "cup.and.saucer.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case mug = "mug"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case mugFill = "mug.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case takeoutbagAndCupAndStraw = "takeoutbag.and.cup.and.straw"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case takeoutbagAndCupAndStrawFill = "takeoutbag.and.cup.and.straw.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case wineglass = "wineglass"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case wineglassFill = "wineglass.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case birthdayCake = "birthday.cake"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case birthdayCakeFill = "birthday.cake.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case carrot = "carrot"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case carrotFill = "carrot.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case forkKnife = "fork.knife"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case forkKnifeCircle = "fork.knife.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case forkKnifeCircleFill = "fork.knife.circle.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case figureWalk = "figure.walk"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case figureWalkCircle = "figure.walk.circle"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case figureWalkCircleFill = "figure.walk.circle.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case figureWalkDiamond = "figure.walk.diamond"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case figureWalkDiamondFill = "figure.walk.diamond.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case figureStand = "figure.stand"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case figureStandLineDottedFigureStand = "figure.stand.line.dotted.figure.stand"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case figureWave = "figure.wave"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case figureWaveCircle = "figure.wave.circle"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case figureWaveCircleFill = "figure.wave.circle.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case figureRoll = "figure.roll"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case ear = "ear"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case earBadgeCheckmark = "ear.badge.checkmark"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case earTrianglebadgeExclamationmark = "ear.trianglebadge.exclamationmark"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case earAndWaveform = "ear.and.waveform"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case earFill = "ear.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case hearingdeviceEar = "hearingdevice.ear"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handRaised = "hand.raised"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handRaisedFill = "hand.raised.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case handRaisedCircle = "hand.raised.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case handRaisedCircleFill = "hand.raised.circle.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case handRaisedSquare = "hand.raised.square"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case handRaisedSquareFill = "hand.raised.square.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handRaisedSlash = "hand.raised.slash"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handRaisedSlashFill = "hand.raised.slash.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handThumbsup = "hand.thumbsup"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handThumbsupFill = "hand.thumbsup.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case handThumbsupCircle = "hand.thumbsup.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case handThumbsupCircleFill = "hand.thumbsup.circle.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handThumbsdown = "hand.thumbsdown"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handThumbsdownFill = "hand.thumbsdown.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case handThumbsdownCircle = "hand.thumbsdown.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case handThumbsdownCircleFill = "hand.thumbsdown.circle.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handPointUpLeft = "hand.point.up.left"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handPointUpLeftFill = "hand.point.up.left.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handDraw = "hand.draw"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handDrawFill = "hand.draw.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handTap = "hand.tap"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handTapFill = "hand.tap.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case rectangleAndHandPointUpLeft = "rectangle.and.hand.point.up.left"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case rectangleAndHandPointUpLeftFill = "rectangle.and.hand.point.up.left.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case rectangleFilledAndHandPointUpLeft = "rectangle.filled.and.hand.point.up.left"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case rectangleAndHandPointUpLeftFilled = "rectangle.and.hand.point.up.left.filled"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handPointLeft = "hand.point.left"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handPointLeftFill = "hand.point.left.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handPointRight = "hand.point.right"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case handPointRightFill = "hand.point.right.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handPointUp = "hand.point.up"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handPointUpFill = "hand.point.up.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handPointUpBraille = "hand.point.up.braille"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handPointUpBrailleFill = "hand.point.up.braille.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handPointDown = "hand.point.down"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handPointDownFill = "hand.point.down.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handWave = "hand.wave"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handWaveFill = "hand.wave.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handsClap = "hands.clap"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handsClapFill = "hands.clap.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handsSparkles = "hands.sparkles"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case handsSparklesFill = "hands.sparkles.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case rectangleCompressVertical = "rectangle.compress.vertical"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -4675,12 +7007,12 @@ enum SFSymbol: String, Codable {
     case rectangleAndArrowUpRightAndArrowDownLeft = "rectangle.and.arrow.up.right.and.arrow.down.left"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case rectangleAndArrowUpRightAndArrowDownLeftSlash = "rectangle.and.arrow.up.right.and.arrow.down.left.slash"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case square2Stack3D = "square.2.stack.3d"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case square2Stack3DTopFilled = "square.2.stack.3d.top.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case square2Stack3DBottomFilled = "square.2.stack.3d.bottom.filled"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case square2Layers3D = "square.2.layers.3d"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case square2Layers3DTopFilled = "square.2.layers.3d.top.filled"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case square2Layers3DBottomFilled = "square.2.layers.3d.bottom.filled"
     @available(watchOS 8.1, iOS 15.1, macOS 12.0, tvOS 15.1, *)
     case square3Layers3DDownRight = "square.3.layers.3d.down.right"
     @available(watchOS 8.3, iOS 15.2, macOS 12.1, tvOS 15.2, *)
@@ -4691,18 +7023,22 @@ enum SFSymbol: String, Codable {
     case square3Layers3DDownLeftSlash = "square.3.layers.3d.down.left.slash"
     @available(watchOS 8.1, iOS 15.1, macOS 12.0, tvOS 15.1, *)
     case square3Layers3DDownForward = "square.3.layers.3d.down.forward"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case square3Layers3DDownForwardSlashRtl = "square.3.layers.3d.down.forward.slash.rtl"
     @available(watchOS 8.1, iOS 15.1, macOS 12.0, tvOS 15.1, *)
     case square3Layers3DDownBackward = "square.3.layers.3d.down.backward"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case square3Stack3D = "square.3.stack.3d"
-    @available(watchOS 8.3, iOS 15.2, macOS 12.1, tvOS 15.2, *)
-    case square3Stack3DSlash = "square.3.stack.3d.slash"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case square3Stack3DTopFilled = "square.3.stack.3d.top.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case square3Stack3DMiddleFilled = "square.3.stack.3d.middle.filled"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case square3Stack3DBottomFilled = "square.3.stack.3d.bottom.filled"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case square3Layers3DDownBackwardSlashRtl = "square.3.layers.3d.down.backward.slash.rtl"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case square3Layers3D = "square.3.layers.3d"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case square3Layers3DSlash = "square.3.layers.3d.slash"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case square3Layers3DTopFilled = "square.3.layers.3d.top.filled"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case square3Layers3DMiddleFilled = "square.3.layers.3d.middle.filled"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case square3Layers3DBottomFilled = "square.3.layers.3d.bottom.filled"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case cylinder = "cylinder"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -4715,6 +7051,8 @@ enum SFSymbol: String, Codable {
     case chartBar = "chart.bar"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case chartBarFill = "chart.bar.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cellularbars = "cellularbars"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case chartPie = "chart.pie"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -4727,8 +7065,24 @@ enum SFSymbol: String, Codable {
     case chartLineUptrendXyaxisCircle = "chart.line.uptrend.xyaxis.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case chartLineUptrendXyaxisCircleFill = "chart.line.uptrend.xyaxis.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chartLineDowntrendXyaxis = "chart.line.downtrend.xyaxis"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chartLineDowntrendXyaxisCircle = "chart.line.downtrend.xyaxis.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chartLineDowntrendXyaxisCircleFill = "chart.line.downtrend.xyaxis.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chartLineFlattrendXyaxis = "chart.line.flattrend.xyaxis"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chartLineFlattrendXyaxisCircle = "chart.line.flattrend.xyaxis.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case chartLineFlattrendXyaxisCircleFill = "chart.line.flattrend.xyaxis.circle.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case chartDotsScatter = "chart.dots.scatter"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case dotSquareshapeSplit2X2 = "dot.squareshape.split.2x2"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case squareshapeDottedSplit2X2 = "squareshape.dotted.split.2x2"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case squareshapeSplit2X2Dotted = "squareshape.split.2x2.dotted"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -4761,6 +7115,8 @@ enum SFSymbol: String, Codable {
     case waveformCircle = "waveform.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case waveformCircleFill = "waveform.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case waveformSlash = "waveform.slash"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case waveformBadgePlus = "waveform.badge.plus"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -4771,14 +7127,6 @@ enum SFSymbol: String, Codable {
     case waveformAndMagnifyingglass = "waveform.and.magnifyingglass"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case waveformAndMic = "waveform.and.mic"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case staroflife = "staroflife"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case staroflifeFill = "staroflife.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case staroflifeCircle = "staroflife.circle"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case staroflifeCircleFill = "staroflife.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case simcard = "simcard"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -4805,6 +7153,18 @@ enum SFSymbol: String, Codable {
     case scalemass = "scalemass"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case scalemassFill = "scalemass.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case angle = "angle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case compassDrawing = "compass.drawing"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case globeDesk = "globe.desk"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case globeDeskFill = "globe.desk.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fossilShell = "fossil.shell"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case fossilShellFill = "fossil.shell.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case gift = "gift"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -4813,30 +7173,6 @@ enum SFSymbol: String, Codable {
     case giftCircle = "gift.circle"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case giftCircleFill = "gift.circle.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case plusApp = "plus.app"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case plusAppFill = "plus.app.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case arrowDownApp = "arrow.down.app"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case arrowDownAppFill = "arrow.down.app.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case arrowUpForwardApp = "arrow.up.forward.app"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case arrowUpForwardAppFill = "arrow.up.forward.app.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case xmarkApp = "xmark.app"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case xmarkAppFill = "xmark.app.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case questionmarkApp = "questionmark.app"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case questionmarkAppFill = "questionmark.app.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case questionmarkAppAr = "questionmark.app.ar"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case questionmarkAppFillAr = "questionmark.app.fill.ar"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case appBadge = "app.badge"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -4857,8 +7193,6 @@ enum SFSymbol: String, Codable {
     case appGift = "app.gift"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case appGiftFill = "app.gift.fill"
-    @available(watchOS 6.1, iOS 13.1, macOS 10.15, tvOS 13.0, *)
-    case studentdesk = "studentdesk"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case hourglass = "hourglass"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -4875,8 +7209,8 @@ enum SFSymbol: String, Codable {
     case banknote = "banknote"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case banknoteFill = "banknote.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case paragraphsign = "paragraphsign"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dollarsignArrowCirclepath = "dollarsign.arrow.circlepath"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case purchased = "purchased"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -4933,14 +7267,24 @@ enum SFSymbol: String, Codable {
     case lifepreserver = "lifepreserver"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case lifepreserverFill = "lifepreserver.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case dotArrowtrianglesUpRightDownLeftCircle = "dot.arrowtriangles.up.right.down.left.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case recordingtape = "recordingtape"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case recordingtapeCircle = "recordingtape.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case recordingtapeCircleFill = "recordingtape.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case binoculars = "binoculars"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case binocularsFill = "binoculars.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case battery100 = "battery.100"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case battery100Circle = "battery.100.circle"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case battery100CircleFill = "battery.100.circle.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case battery75 = "battery.75"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -4953,42 +7297,28 @@ enum SFSymbol: String, Codable {
     case battery100Bolt = "battery.100.bolt"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case battery100BoltRtl = "battery.100.bolt.rtl"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case minusPlusBatteryblock = "minus.plus.batteryblock"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case minusPlusBatteryblockFill = "minus.plus.batteryblock.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case boltBatteryblock = "bolt.batteryblock"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case boltBatteryblockFill = "bolt.batteryblock.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case lightbulb = "lightbulb"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case lightbulbFill = "lightbulb.fill"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case lightbulbCircle = "lightbulb.circle"
-    @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
-    case lightbulbCircleFill = "lightbulb.circle.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case lightbulbSlash = "lightbulb.slash"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case lightbulbSlashFill = "lightbulb.slash.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case fibrechannel = "fibrechannel"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case checklistUnchecked = "checklist.unchecked"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case checklist = "checklist"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case checklistRtl = "checklist.rtl"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case checklistChecked = "checklist.checked"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case checklistCheckedRtl = "checklist.checked.rtl"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case squareFillTextGrid1X2 = "square.fill.text.grid.1x2"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case listDash = "list.dash"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case listBullet = "list.bullet"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case listBulletCircle = "list.bullet.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case listBulletCircleFill = "list.bullet.circle.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case listDash = "list.dash"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case listTriangle = "list.triangle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -5011,6 +7341,8 @@ enum SFSymbol: String, Codable {
     case decreaseQuotelevel = "decrease.quotelevel"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case increaseQuotelevel = "increase.quotelevel"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case quotelevel = "quotelevel"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case listBulletBelowRectangle = "list.bullet.below.rectangle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -5029,6 +7361,10 @@ enum SFSymbol: String, Codable {
     case textInsert = "text.insert"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case textAppend = "text.append"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case textLineFirstAndArrowtriangleForward = "text.line.first.and.arrowtriangle.forward"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case textLineLastAndArrowtriangleForward = "text.line.last.and.arrowtriangle.forward"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case textQuote = "text.quote"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -5051,6 +7387,12 @@ enum SFSymbol: String, Codable {
     case textJustifyTrailing = "text.justify.trailing"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case textRedaction = "text.redaction"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case textWordSpacing = "text.word.spacing"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowUpAndDownTextHorizontal = "arrow.up.and.down.text.horizontal"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowLeftAndRightTextVertical = "arrow.left.and.right.text.vertical"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case listAndFilm = "list.and.film"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -5080,6 +7422,8 @@ enum SFSymbol: String, Codable {
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case characterZh = "character.zh"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
+    case characterZhTraditional = "character.zh.traditional"
+    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case characterJa = "character.ja"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case characterKo = "character.ko"
@@ -5095,6 +7439,8 @@ enum SFSymbol: String, Codable {
     case textformatSizeSmallerTh = "textformat.size.smaller.th"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case textformatSizeSmallerZh = "textformat.size.smaller.zh"
+    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
+    case textformatSizeSmallerZhTraditional = "textformat.size.smaller.zh.traditional"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case textformatSizeSmallerJa = "textformat.size.smaller.ja"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
@@ -5112,6 +7458,8 @@ enum SFSymbol: String, Codable {
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case textformatSizeLargerZh = "textformat.size.larger.zh"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
+    case textformatSizeLargerZhTraditional = "textformat.size.larger.zh.traditional"
+    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case textformatSizeLargerJa = "textformat.size.larger.ja"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case textformatSizeLargerKo = "textformat.size.larger.ko"
@@ -5127,6 +7475,8 @@ enum SFSymbol: String, Codable {
     case textformatSizeTh = "textformat.size.th"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case textformatSizeZh = "textformat.size.zh"
+    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
+    case textformatSizeZhTraditional = "textformat.size.zh.traditional"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case textformatSizeJa = "textformat.size.ja"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
@@ -5148,6 +7498,8 @@ enum SFSymbol: String, Codable {
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case textformatSuperscriptZh = "textformat.superscript.zh"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
+    case textformatSuperscriptZhTraditional = "textformat.superscript.zh.traditional"
+    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case textformatSuperscriptJa = "textformat.superscript.ja"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case textformatSuperscriptKo = "textformat.superscript.ko"
@@ -5163,6 +7515,8 @@ enum SFSymbol: String, Codable {
     case textformatSubscriptTh = "textformat.subscript.th"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case textformatSubscriptZh = "textformat.subscript.zh"
+    @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
+    case textformatSubscriptZhTraditional = "textformat.subscript.zh.traditional"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case textformatSubscriptJa = "textformat.subscript.ja"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
@@ -5204,6 +7558,8 @@ enum SFSymbol: String, Codable {
     @available(watchOS 7.4, iOS 14.5, macOS 11.3, tvOS 14.5, *)
     case characterCursorIbeamZh = "character.cursor.ibeam.zh"
     @available(watchOS 7.4, iOS 14.5, macOS 11.3, tvOS 14.5, *)
+    case characterCursorIbeamZhTraditional = "character.cursor.ibeam.zh.traditional"
+    @available(watchOS 7.4, iOS 14.5, macOS 11.3, tvOS 14.5, *)
     case characterCursorIbeamJa = "character.cursor.ibeam.ja"
     @available(watchOS 7.4, iOS 14.5, macOS 11.3, tvOS 14.5, *)
     case characterCursorIbeamKo = "character.cursor.ibeam.ko"
@@ -5229,8 +7585,6 @@ enum SFSymbol: String, Codable {
     case percentAr = "percent.ar"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case function = "function"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case fn = "fn"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case textformat123 = "textformat.123"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
@@ -5249,6 +7603,12 @@ enum SFSymbol: String, Codable {
     case _123RectangleHi = "123.rectangle.hi"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case _123RectangleFillHi = "123.rectangle.fill.hi"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case textformat12 = "textformat.12"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case textformat12Ar = "textformat.12.ar"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case textformat12Hi = "textformat.12.hi"
     @available(watchOS 7.4, iOS 14.5, macOS 11.3, tvOS 14.5, *)
     case characterTextbox = "character.textbox"
     @available(watchOS 7.4, iOS 14.5, macOS 11.3, tvOS 14.5, *)
@@ -5260,19 +7620,35 @@ enum SFSymbol: String, Codable {
     @available(watchOS 7.4, iOS 14.5, macOS 11.3, tvOS 14.5, *)
     case characterTextboxZh = "character.textbox.zh"
     @available(watchOS 7.4, iOS 14.5, macOS 11.3, tvOS 14.5, *)
+    case characterTextboxZhTraditional = "character.textbox.zh.traditional"
+    @available(watchOS 7.4, iOS 14.5, macOS 11.3, tvOS 14.5, *)
     case characterTextboxJa = "character.textbox.ja"
     @available(watchOS 7.4, iOS 14.5, macOS 11.3, tvOS 14.5, *)
     case characterTextboxKo = "character.textbox.ko"
     @available(watchOS 7.4, iOS 14.5, macOS 11.3, tvOS 14.5, *)
     case characterTextboxHi = "character.textbox.hi"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case numbersign = "numbersign"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case characterSutton = "character.sutton"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case characterDuployan = "character.duployan"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case characterPhonetic = "character.phonetic"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case aMagnify = "a.magnify"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case paragraphsign = "paragraphsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case info = "info"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case infoCircle = "info.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case infoCircleFill = "info.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case infoSquare = "info.square"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case infoSquareFill = "info.square.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case at = "at"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -5287,6 +7663,10 @@ enum SFSymbol: String, Codable {
     case questionmark = "questionmark"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case questionmarkAr = "questionmark.ar"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case exclamationmarkQuestionmark = "exclamationmark.questionmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case exclamationmarkQuestionmarkAr = "exclamationmark.questionmark.ar"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case questionmarkCircle = "questionmark.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -5398,26 +7778,6 @@ enum SFSymbol: String, Codable {
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case multiplySquareFill = "multiply.square.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case xmarkRectangle = "xmark.rectangle"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case xmarkRectangleFill = "xmark.rectangle.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case xmarkRectanglePortrait = "xmark.rectangle.portrait"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case xmarkRectanglePortraitFill = "xmark.rectangle.portrait.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case xmarkDiamond = "xmark.diamond"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case xmarkDiamondFill = "xmark.diamond.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case xmarkShield = "xmark.shield"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case xmarkShieldFill = "xmark.shield.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case xmarkOctagon = "xmark.octagon"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case xmarkOctagonFill = "xmark.octagon.fill"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case divide = "divide"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case divideCircle = "divide.circle"
@@ -5480,8 +7840,6 @@ enum SFSymbol: String, Codable {
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case numberSquareFill = "number.square.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case xSquareroot = "x.squareroot"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case xmark = "xmark"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case xmarkCircle = "xmark.circle"
@@ -5492,11 +7850,43 @@ enum SFSymbol: String, Codable {
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case xmarkSquareFill = "xmark.square.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case xmarkRectangle = "xmark.rectangle"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case xmarkRectangleFill = "xmark.rectangle.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case xmarkRectanglePortrait = "xmark.rectangle.portrait"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case xmarkRectanglePortraitFill = "xmark.rectangle.portrait.fill"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case xmarkDiamond = "xmark.diamond"
+    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
+    case xmarkDiamondFill = "xmark.diamond.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case xmarkShield = "xmark.shield"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case xmarkShieldFill = "xmark.shield.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case xmarkOctagon = "xmark.octagon"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
+    case xmarkOctagonFill = "xmark.octagon.fill"
+    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case checkmark = "checkmark"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case checkmarkCircle = "checkmark.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case checkmarkCircleFill = "checkmark.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case checkmarkCircleBadgeQuestionmark = "checkmark.circle.badge.questionmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case checkmarkCircleBadgeQuestionmarkFill = "checkmark.circle.badge.questionmark.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case checkmarkCircleBadgeQuestionmarkAr = "checkmark.circle.badge.questionmark.ar"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case checkmarkCircleBadgeQuestionmarkFillAr = "checkmark.circle.badge.questionmark.fill.ar"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case checkmarkCircleBadgeXmark = "checkmark.circle.badge.xmark"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case checkmarkCircleBadgeXmarkFill = "checkmark.circle.badge.xmark.fill"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case checkmarkCircleTrianglebadgeExclamationmark = "checkmark.circle.trianglebadge.exclamationmark"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -5588,10 +7978,6 @@ enum SFSymbol: String, Codable {
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case chevronDownSquareFill = "chevron.down.square.fill"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case control = "control"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
-    case projective = "projective"
-    @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case chevronUpChevronDown = "chevron.up.chevron.down"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case chevronCompactUp = "chevron.compact.up"
@@ -5651,6 +8037,8 @@ enum SFSymbol: String, Codable {
     case arrowUpSquare = "arrow.up.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case arrowUpSquareFill = "arrow.up.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowUpCircleBadgeClock = "arrow.up.circle.badge.clock"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case arrowDown = "arrow.down"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -5909,6 +8297,14 @@ enum SFSymbol: String, Codable {
     case arrowForwardToLineCircle = "arrow.forward.to.line.circle"
     @available(watchOS 8.0, iOS 15.0, macOS 12.0, tvOS 15.0, *)
     case arrowForwardToLineCircleFill = "arrow.forward.to.line.circle.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowLeftAndLineVerticalAndArrowRight = "arrow.left.and.line.vertical.and.arrow.right"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowRightAndLineVerticalAndArrowLeft = "arrow.right.and.line.vertical.and.arrow.left"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowDownAndLineHorizontalAndArrowUp = "arrow.down.and.line.horizontal.and.arrow.up"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case arrowUpAndLineHorizontalAndArrowDown = "arrow.up.and.line.horizontal.and.arrow.down"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case arrowClockwise = "arrow.clockwise"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -5961,6 +8357,8 @@ enum SFSymbol: String, Codable {
     case arrowTriangle2CirclepathCircleFill = "arrow.triangle.2.circlepath.circle.fill"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case exclamationmarkArrowTriangle2Circlepath = "exclamationmark.arrow.triangle.2.circlepath"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case gearshapeArrowTriangle2Circlepath = "gearshape.arrow.triangle.2.circlepath"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case arrowTriangleCapsulepath = "arrow.triangle.capsulepath"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6271,6 +8669,8 @@ enum SFSymbol: String, Codable {
     case zSquare = "z.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case zSquareFill = "z.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dollarsign = "dollarsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case dollarsignCircle = "dollarsign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6279,6 +8679,8 @@ enum SFSymbol: String, Codable {
     case dollarsignSquare = "dollarsign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case dollarsignSquareFill = "dollarsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case centsign = "centsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case centsignCircle = "centsign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6287,6 +8689,8 @@ enum SFSymbol: String, Codable {
     case centsignSquare = "centsign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case centsignSquareFill = "centsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case yensign = "yensign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case yensignCircle = "yensign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6295,6 +8699,8 @@ enum SFSymbol: String, Codable {
     case yensignSquare = "yensign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case yensignSquareFill = "yensign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case sterlingsign = "sterlingsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sterlingsignCircle = "sterlingsign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6303,6 +8709,8 @@ enum SFSymbol: String, Codable {
     case sterlingsignSquare = "sterlingsign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case sterlingsignSquareFill = "sterlingsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case francsign = "francsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case francsignCircle = "francsign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6311,6 +8719,8 @@ enum SFSymbol: String, Codable {
     case francsignSquare = "francsign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case francsignSquareFill = "francsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case florinsign = "florinsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case florinsignCircle = "florinsign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6319,6 +8729,8 @@ enum SFSymbol: String, Codable {
     case florinsignSquare = "florinsign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case florinsignSquareFill = "florinsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case turkishlirasign = "turkishlirasign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case turkishlirasignCircle = "turkishlirasign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6327,6 +8739,8 @@ enum SFSymbol: String, Codable {
     case turkishlirasignSquare = "turkishlirasign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case turkishlirasignSquareFill = "turkishlirasign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case rublesign = "rublesign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case rublesignCircle = "rublesign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6335,6 +8749,8 @@ enum SFSymbol: String, Codable {
     case rublesignSquare = "rublesign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case rublesignSquareFill = "rublesign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case eurosign = "eurosign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case eurosignCircle = "eurosign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6343,6 +8759,8 @@ enum SFSymbol: String, Codable {
     case eurosignSquare = "eurosign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case eurosignSquareFill = "eurosign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case dongsign = "dongsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case dongsignCircle = "dongsign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6351,6 +8769,8 @@ enum SFSymbol: String, Codable {
     case dongsignSquare = "dongsign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case dongsignSquareFill = "dongsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case indianrupeesign = "indianrupeesign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case indianrupeesignCircle = "indianrupeesign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6359,6 +8779,8 @@ enum SFSymbol: String, Codable {
     case indianrupeesignSquare = "indianrupeesign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case indianrupeesignSquareFill = "indianrupeesign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tengesign = "tengesign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case tengesignCircle = "tengesign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6367,6 +8789,8 @@ enum SFSymbol: String, Codable {
     case tengesignSquare = "tengesign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case tengesignSquareFill = "tengesign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case pesetasign = "pesetasign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case pesetasignCircle = "pesetasign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6375,6 +8799,8 @@ enum SFSymbol: String, Codable {
     case pesetasignSquare = "pesetasign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case pesetasignSquareFill = "pesetasign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case pesosign = "pesosign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case pesosignCircle = "pesosign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6383,6 +8809,8 @@ enum SFSymbol: String, Codable {
     case pesosignSquare = "pesosign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case pesosignSquareFill = "pesosign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case kipsign = "kipsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case kipsignCircle = "kipsign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6391,6 +8819,8 @@ enum SFSymbol: String, Codable {
     case kipsignSquare = "kipsign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case kipsignSquareFill = "kipsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case wonsign = "wonsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case wonsignCircle = "wonsign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6399,6 +8829,8 @@ enum SFSymbol: String, Codable {
     case wonsignSquare = "wonsign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case wonsignSquareFill = "wonsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case lirasign = "lirasign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case lirasignCircle = "lirasign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6407,6 +8839,8 @@ enum SFSymbol: String, Codable {
     case lirasignSquare = "lirasign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case lirasignSquareFill = "lirasign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case australsign = "australsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case australsignCircle = "australsign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6415,6 +8849,8 @@ enum SFSymbol: String, Codable {
     case australsignSquare = "australsign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case australsignSquareFill = "australsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case hryvniasign = "hryvniasign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case hryvniasignCircle = "hryvniasign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6423,6 +8859,8 @@ enum SFSymbol: String, Codable {
     case hryvniasignSquare = "hryvniasign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case hryvniasignSquareFill = "hryvniasign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case nairasign = "nairasign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case nairasignCircle = "nairasign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6431,6 +8869,8 @@ enum SFSymbol: String, Codable {
     case nairasignSquare = "nairasign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case nairasignSquareFill = "nairasign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case guaranisign = "guaranisign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case guaranisignCircle = "guaranisign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6439,6 +8879,8 @@ enum SFSymbol: String, Codable {
     case guaranisignSquare = "guaranisign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case guaranisignSquareFill = "guaranisign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case coloncurrencysign = "coloncurrencysign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case coloncurrencysignCircle = "coloncurrencysign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6447,6 +8889,8 @@ enum SFSymbol: String, Codable {
     case coloncurrencysignSquare = "coloncurrencysign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case coloncurrencysignSquareFill = "coloncurrencysign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cedisign = "cedisign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cedisignCircle = "cedisign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6455,6 +8899,8 @@ enum SFSymbol: String, Codable {
     case cedisignSquare = "cedisign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cedisignSquareFill = "cedisign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case cruzeirosign = "cruzeirosign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cruzeirosignCircle = "cruzeirosign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6463,6 +8909,8 @@ enum SFSymbol: String, Codable {
     case cruzeirosignSquare = "cruzeirosign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case cruzeirosignSquareFill = "cruzeirosign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case tugriksign = "tugriksign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case tugriksignCircle = "tugriksign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6471,6 +8919,8 @@ enum SFSymbol: String, Codable {
     case tugriksignSquare = "tugriksign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case tugriksignSquareFill = "tugriksign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case millsign = "millsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case millsignCircle = "millsign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6479,6 +8929,8 @@ enum SFSymbol: String, Codable {
     case millsignSquare = "millsign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case millsignSquareFill = "millsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case shekelsign = "shekelsign"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case shekelsignCircle = "shekelsign.circle"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
@@ -6487,6 +8939,8 @@ enum SFSymbol: String, Codable {
     case shekelsignSquare = "shekelsign.square"
     @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
     case shekelsignSquareFill = "shekelsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case manatsign = "manatsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case manatsignCircle = "manatsign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6495,6 +8949,8 @@ enum SFSymbol: String, Codable {
     case manatsignSquare = "manatsign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case manatsignSquareFill = "manatsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case rupeesign = "rupeesign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case rupeesignCircle = "rupeesign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6503,6 +8959,8 @@ enum SFSymbol: String, Codable {
     case rupeesignSquare = "rupeesign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case rupeesignSquareFill = "rupeesign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case bahtsign = "bahtsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case bahtsignCircle = "bahtsign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6511,6 +8969,8 @@ enum SFSymbol: String, Codable {
     case bahtsignSquare = "bahtsign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case bahtsignSquareFill = "bahtsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case larisign = "larisign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case larisignCircle = "larisign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6519,6 +8979,8 @@ enum SFSymbol: String, Codable {
     case larisignSquare = "larisign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case larisignSquareFill = "larisign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case bitcoinsign = "bitcoinsign"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case bitcoinsignCircle = "bitcoinsign.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -6527,6 +8989,8 @@ enum SFSymbol: String, Codable {
     case bitcoinsignSquare = "bitcoinsign.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case bitcoinsignSquareFill = "bitcoinsign.square.fill"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case brazilianrealsign = "brazilianrealsign"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
     case brazilianrealsignCircle = "brazilianrealsign.circle"
     @available(watchOS 7.1, iOS 14.2, macOS 11.0, tvOS 14.2, *)
@@ -6639,6 +9103,86 @@ enum SFSymbol: String, Codable {
     case _9AltSquare = "9.alt.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case _9AltSquareFill = "9.alt.square.fill"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _0CircleAr = "0.circle.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _0CircleFillAr = "0.circle.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _0SquareAr = "0.square.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _0SquareFillAr = "0.square.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _1CircleAr = "1.circle.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _1CircleFillAr = "1.circle.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _1SquareAr = "1.square.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _1SquareFillAr = "1.square.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _2CircleAr = "2.circle.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _2CircleFillAr = "2.circle.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _2SquareAr = "2.square.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _2SquareFillAr = "2.square.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _3CircleAr = "3.circle.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _3CircleFillAr = "3.circle.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _3SquareAr = "3.square.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _3SquareFillAr = "3.square.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _4CircleAr = "4.circle.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _4CircleFillAr = "4.circle.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _4SquareAr = "4.square.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _4SquareFillAr = "4.square.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _5CircleAr = "5.circle.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _5CircleFillAr = "5.circle.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _5SquareAr = "5.square.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _5SquareFillAr = "5.square.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _6CircleAr = "6.circle.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _6CircleFillAr = "6.circle.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _6SquareAr = "6.square.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _6SquareFillAr = "6.square.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _7CircleAr = "7.circle.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _7CircleFillAr = "7.circle.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _7SquareAr = "7.square.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _7SquareFillAr = "7.square.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _8CircleAr = "8.circle.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _8CircleFillAr = "8.circle.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _8SquareAr = "8.square.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _8SquareFillAr = "8.square.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _9CircleAr = "9.circle.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _9CircleFillAr = "9.circle.fill.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _9SquareAr = "9.square.ar"
+    @available(watchOS 9.1, iOS 16.1, macOS 13.0, tvOS 16.1, *)
+    case _9SquareFillAr = "9.square.fill.ar"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case _00Circle = "00.circle"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
@@ -7047,6 +9591,6 @@ enum SFSymbol: String, Codable {
     case _50Square = "50.square"
     @available(watchOS 6.0, iOS 13.0, macOS 10.15, tvOS 13.0, *)
     case _50SquareFill = "50.square.fill"
-    @available(watchOS 7.0, iOS 14.0, macOS 11.0, tvOS 14.0, *)
-    case applelogo = "applelogo"
+    @available(watchOS 9.0, iOS 16.0, macOS 13.0, tvOS 16.0, *)
+    case appleLogo = "apple.logo"
 }
