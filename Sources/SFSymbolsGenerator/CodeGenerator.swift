@@ -24,7 +24,7 @@ public final class CodeGenerator {
         let versions = try generateVersions()
 
         _ = try generateSymbols(symbols: rawSymbols, nameAvailability: versions)
-        _ = try generateCategories()
+        _ = try generateCategories(symbols: rawSymbols)
         _ = try generateSymbolsSearchTerms(symbols: rawSymbols)
         _ = try generateSymbolCaseIterable()
         _ = try generateUnicodeExtension(symbols: rawSymbols)
@@ -226,10 +226,11 @@ public final class CodeGenerator {
             }
         }
         let trailing = """
-                    default: return []
+                    default: return [rawValue]
                 }
             }
         }
+
         """
         string.append(contentsOf: trailing)
 
@@ -252,7 +253,7 @@ public final class CodeGenerator {
 
     // MARK: - Categories
 
-    private func generateCategories() throws -> Bool {
+    private func generateCategories(symbols: [String]) throws -> Bool {
 
         var url = Bundle.module.url(forResource: "categories", withExtension: "plist")!
         var data = try Data(contentsOf: url)
@@ -263,19 +264,23 @@ public final class CodeGenerator {
         let symbolCategories = try Self.plistDecoder.decode([String: [String]].self, from: data)
 
         var categorySymbolMap = [String: [String]]()
-        for (key, categories) in symbolCategories {
-            for category in categories {
-                if categorySymbolMap[category] == nil {
-                    categorySymbolMap[category] = []
+
+        for symbol in symbols {
+            if let categories = symbolCategories[symbol] {
+                for category in categories {
+                    if categorySymbolMap[category] == nil {
+                        categorySymbolMap[category] = []
+                    }
+                    categorySymbolMap[category]?.append(symbol)
                 }
-                categorySymbolMap[category]?.append(key)
             }
         }
 
         var fullCategories = [Category]()
         for category in categories {
-            let name = category["key"]!
-            fullCategories.append(Category(name: name, icon: category["icon"]!, symbols: categorySymbolMap[name] ?? []))
+            if let name = category["key"], let icon = category["icon"] {
+                fullCategories.append(Category(name: name, icon: icon, symbols: categorySymbolMap[name] ?? []))
+            }
         }
 
         let structString = """
@@ -302,7 +307,7 @@ public final class CodeGenerator {
         categoriesString.append(contentsOf: "extension SFSymbolCategory {\n")
         categoriesString.append(contentsOf: fullCategories.map({ categoryCodeGen($0) }).joined(separator: "\n"))
         categoriesString.append(contentsOf: "\n    static let allCases: [SFSymbolCategory] = [\(fullCategories.map({ ".\($0.name)" }).joined(separator: ", "))]")
-        categoriesString.append(contentsOf: "\n}")
+        categoriesString.append(contentsOf: "\n}\n")
 
         let filename = getCodegenPath().appendingPathComponent("SFSymbolCategory.swift", isDirectory: false)
         do {

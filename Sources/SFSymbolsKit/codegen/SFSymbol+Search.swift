@@ -1900,7 +1900,7 @@ extension SFSymbol {
             case .brazilianrealsignCircleFill: return ["currencies", "currency", "brazilianrealsign.circle.fill"]
             case .brazilianrealsignSquare: return ["currencies", "currency", "brazilianrealsign.square"]
             case .brazilianrealsignSquareFill: return ["currencies", "currency", "brazilianrealsign.square.fill"]
-            default: return []
+            default: return [rawValue]
         }
     }
 }
