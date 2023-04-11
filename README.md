@@ -1,6 +1,11 @@
 # SFSymbolsKit
+![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)
+![SwiftPM Compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)
+![Platforms: iOS, macOS, watchOS, tvOS](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-blue)
 
 A utility package for accessing SF Symbols and their categories.
+
+Supports all SFSymbols versions through 4.1 (iOS 16.1, macOS 13.0, tvOS 16.1, watchOS 9.1).
 
 ## Usage
 
