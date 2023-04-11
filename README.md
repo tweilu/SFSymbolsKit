@@ -6,13 +6,13 @@ A utility package for accessing SF Symbols and their categories.
 
 ### Easier symbols access
 
-Before
+Without SFSymbolsKit 😰
 - Pass a string to the initializer, which is prone to error
 - No compile time checks for errors
 ```
 Image(systemName: "square.grid.2x2")
 ```
-After
+With SFSymbolsKit 🤩
 - No typos 
 - Compile time check for availability
 - Xcode can autocomplete
