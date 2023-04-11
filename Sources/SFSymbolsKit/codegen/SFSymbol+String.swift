@@ -1,5 +1,5 @@
 extension SFSymbol {
-    var string: String? {
+    public var string: String? {
         switch self {
             case .squareAndArrowUp: return "􀈂"
             case .squareAndArrowUpFill: return "􀈃"

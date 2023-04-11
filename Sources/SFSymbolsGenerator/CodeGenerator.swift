@@ -57,7 +57,7 @@ public final class CodeGenerator {
 
     private func generateSymbols(symbols: [String], nameAvailability: NameAvailability) throws -> Bool {
 
-        var symbolsString = "\(Self.codegenDisclaimer)\nenum SFSymbol: String, Codable {\n"
+        var symbolsString = "\(Self.codegenDisclaimer)\npublic enum SFSymbol: String, Codable {\n"
         symbolsString.append(contentsOf: symbols.map({
             var availabilityString: String? = nil
             if let yearString = nameAvailability.symbols[$0] {
@@ -124,7 +124,7 @@ public final class CodeGenerator {
 
         var result = """
         extension SFSymbol {
-            var string: String? {
+            public var string: String? {
                 switch self {
 
         """
@@ -177,7 +177,7 @@ public final class CodeGenerator {
         var string = """
         \(Self.codegenDisclaimer)
         extension SFSymbol: CaseIterable {
-            static var allCases: [SFSymbol] {
+            public static var allCases: [SFSymbol] {
                 allCasesRaw.compactMap {
                     SFSymbol(rawValue: $0)
                 }
@@ -215,7 +215,7 @@ public final class CodeGenerator {
         var string = """
         \(Self.codegenDisclaimer)
         extension SFSymbol {
-            var searchTerms: [String] {
+            public var searchTerms: [String] {
                 switch self {
 
         """
@@ -285,10 +285,10 @@ public final class CodeGenerator {
 
         let structString = """
             \(Self.codegenDisclaimer)
-            struct SFSymbolCategory: Codable, Hashable {
-                let name: String
-                let icon: SFSymbol
-                let symbols: [SFSymbol]
+            public struct SFSymbolCategory: Codable, Hashable {
+                public let name: String
+                public let icon: SFSymbol
+                public let symbols: [SFSymbol]
                 init(name: String, icon: String, symbols: [String]) {
                     self.name = name
                     let availableSymbols = symbols.compactMap { SFSymbol(rawValue: $0) }
@@ -306,7 +306,7 @@ public final class CodeGenerator {
 
         categoriesString.append(contentsOf: "extension SFSymbolCategory {\n")
         categoriesString.append(contentsOf: fullCategories.map({ categoryCodeGen($0) }).joined(separator: "\n"))
-        categoriesString.append(contentsOf: "\n    static let allCases: [SFSymbolCategory] = [\(fullCategories.map({ ".\($0.name)" }).joined(separator: ", "))]")
+        categoriesString.append(contentsOf: "\n    public static let allCases: [SFSymbolCategory] = [\(fullCategories.map({ ".\($0.name)" }).joined(separator: ", "))]")
         categoriesString.append(contentsOf: "\n}\n")
 
         let filename = getCodegenPath().appendingPathComponent("SFSymbolCategory.swift", isDirectory: false)
@@ -322,7 +322,7 @@ public final class CodeGenerator {
 
     private func categoryCodeGen(_ category: Category) -> String {
         let symbols = category.symbols.map({ "\"\($0)\"" }).joined(separator: ", ")
-        return "    static let \(category.name) = SFSymbolCategory(name: \"\(category.name)\", icon: \"\(category.icon)\", symbols: [\(symbols)])"
+        return "    public static let \(category.name) = SFSymbolCategory(name: \"\(category.name)\", icon: \"\(category.icon)\", symbols: [\(symbols)])"
     }
 
 }
