@@ -6,6 +6,9 @@ import PackageDescription
 let package = Package(
     name: "SFSymbolsKit",
     platforms: [.iOS(.v13), .tvOS(.v13), .watchOS(.v6), .macOS(.v10_15)],
+    products: [
+        .library(name: "SFSymbolsKit", targets: ["SFSymbolsKit"]),
+    ],
     dependencies: [],
     targets: [
         .executableTarget(
